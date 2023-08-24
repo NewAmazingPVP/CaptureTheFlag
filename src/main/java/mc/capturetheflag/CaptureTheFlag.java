@@ -55,13 +55,11 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
-        player.sendTitle(ChatColor.DARK_PURPLE + "Welcome to the zombie game!", "");
+        player.sendTitle(ChatColor.DARK_AQUA + "Welcome!", "");
         player.getWorld().strikeLightningEffect(event.getPlayer().getLocation());
-        PotionEffect newEffect = new PotionEffect(PotionEffectType.BLINDNESS, 5*20, 1, false, false);
-        player.addPotionEffect(newEffect);
         PlayerMoney.setCoins(player, 0);
         FastBoard board = new FastBoard(player);
-        board.updateTitle(ChatColor.DARK_PURPLE + "Zombies Minigame");
+        board.updateTitle(ChatColor.AQUA + "Capture The Flag");
         this.boards.put(player.getUniqueId(), board);
     }
 
@@ -86,11 +84,8 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
 
         board.updateLines(
                 "",
-                ChatColor.YELLOW + "Coins: " + coins,
-                ChatColor.AQUA + "Level: " + 1,
-                ChatColor.BLUE + "Ammo: " + 1,
+                ChatColor.AQUA + "Souls: " + 1,
                 ChatColor.GREEN + "Time Left: " + 1,
-                ChatColor.DARK_RED + "Zombies: " + 1
         );
     }
 }
