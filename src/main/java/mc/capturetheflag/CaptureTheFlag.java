@@ -10,6 +10,7 @@ import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.inventory.ItemStack;
@@ -24,7 +25,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public final class CaptureTheFlag extends JavaPlugin {
+public final class CaptureTheFlag extends JavaPlugin implements Listener {
 
     public static Economy economy;
     public static CaptureTheFlag captureTheFlag;
@@ -36,6 +37,7 @@ public final class CaptureTheFlag extends JavaPlugin {
             getDataFolder().mkdirs();
         }
         captureTheFlag = this;
+        getServer().getPluginManager().registerEvents(this, this);
         getServer().getPluginManager().registerEvents(new DetectBlock(), this);
         getServer().getPluginManager().registerEvents(new LaunchBall(), this);
 
