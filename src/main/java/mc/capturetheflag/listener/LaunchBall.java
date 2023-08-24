@@ -2,6 +2,7 @@ package mc.capturetheflag.listener;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.Particle;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -18,9 +19,10 @@ public class LaunchBall implements Listener {
     public void onPlayerInteract(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         if ((event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) && event.getItem().getType().equals(Material.SLIME_BALL)) {
-            player.sendMessage("fuck you");
             player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 3, 55, true));
             player.playSound(player.getLocation(), "entity.blaze.shoot", 1.0f, 1.0f);
+            player.spawnParticle(Particle.DRAGON_BREATH , player.getLocation().add(0, 1, 0), 100, 0.5, 0.5, 0.5, 0.1);
+            player.getInventory().setItemInMainHand(null);
         }
     }
 }
