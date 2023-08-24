@@ -2,6 +2,7 @@ package mc.capturetheflag;
 
 import mc.capturetheflag.game.PlayerMoney;
 import mc.capturetheflag.listener.DetectBlock;
+import mc.capturetheflag.listener.LaunchBall;
 import mc.capturetheflag.utility.AutoUpload;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -36,6 +37,7 @@ public final class CaptureTheFlag extends JavaPlugin {
         }
         captureTheFlag = this;
         getServer().getPluginManager().registerEvents(new DetectBlock(), this);
+        getServer().getPluginManager().registerEvents(new LaunchBall(), this);
 
         setupEconomy();
         getServer().getScheduler().runTaskTimer(this, () -> {

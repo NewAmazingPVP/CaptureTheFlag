@@ -19,7 +19,8 @@ public class LaunchBall implements Listener {
         Player player = event.getPlayer();
         if ((event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) && event.getItem().getType().equals(Material.SLIME_BALL)) {
             player.sendMessage("test");
-            player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 3, 55, true);
+            player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 3, 55, true));
             player.playSound(player.getLocation(), "entity.blaze.shoot", 1.0f, 1.0f);
         }
     }
+}
