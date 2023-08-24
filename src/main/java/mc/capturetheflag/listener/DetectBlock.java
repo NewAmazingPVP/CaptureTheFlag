@@ -12,13 +12,6 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 public class DetectBlock implements Listener {
-
-    @EventHandler
-    public void onPlayerInteract(PlayerInteractEvent event) {
-        Player player = event.getPlayer();
-        if(player.getInventory().getItemInMainHand().getType().equals(Material.SPONGE)){
-
-        }
-    }
+    
 
 }
