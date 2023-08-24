@@ -1,5 +1,6 @@
 package mc.capturetheflag.listener;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
@@ -18,8 +19,10 @@ public class Craft_table_detect implements Listener {
 
     @EventHandler
     public void onInventoryOpen(InventoryOpenEvent event) {
+        Player player = (Player) event.getPlayer();
         if (!(event.getInventory().getType() == InventoryType.PLAYER)) {
             event.setCancelled(true); // Cancel the event to prevent opening the crafting table
+            player.sendMessage(ChatColor.RED + "You can not open that!");
         }
     }
 }
