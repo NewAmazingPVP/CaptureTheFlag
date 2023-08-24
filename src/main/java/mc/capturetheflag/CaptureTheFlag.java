@@ -85,7 +85,7 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         board.updateLines(
                 "",
                 ChatColor.AQUA + "Souls: " + 1,
-                ChatColor.GREEN + "Time Left: " + 1,
+                ChatColor.GREEN + "Time Left: " + 1
         );
     }
 }
