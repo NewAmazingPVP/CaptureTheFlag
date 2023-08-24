@@ -11,7 +11,7 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 public class DetectBlock implements Listener {
-    
+
     @EventHandler
     public void onPlayerMove(PlayerMoveEvent event) {
         Player player = event.getPlayer();
@@ -23,3 +23,4 @@ public class DetectBlock implements Listener {
             player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 20, 0));
         }
     }
+}
