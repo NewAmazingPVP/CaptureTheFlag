@@ -16,8 +16,9 @@ public class DetectBlock implements Listener {
     public void onPlayerMove(PlayerMoveEvent event) {
         Player player = event.getPlayer();
         Location to = event.getTo();
+        Location below = to.clone().subtract(0, 1, 0);
 
-        if (to.getBlock().getType() == Material.SPONGE) {
+        if (below.getBlock().getType() == Material.SPONGE) {
             player.sendMessage("test");
             player.playSound(player.getLocation(), "entity.blaze.shoot", 1.0f, 1.0f);
             player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 20, 0));
