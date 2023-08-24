@@ -6,6 +6,7 @@ import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -13,14 +14,11 @@ import org.bukkit.potion.PotionEffectType;
 public class DetectBlock implements Listener {
 
     @EventHandler
-    public void onPlayerMove(PlayerMoveEvent event) {
+    public void onPlayerInteract(PlayerInteractEvent event) {
         Player player = event.getPlayer();
-        Location to = event.getTo();
-        Location below = to.clone().subtract(0, 1, 0);
+        if(player.getInventory().getItemInMainHand().getType().equals(Material.SPONGE)){
 
-        if (below.getBlock().getType() == Material.SPONGE) {
-            player.playSound(player.getLocation(), "entity.blaze.shoot", 1.0f, 1.0f);
-            player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 3, 55, true));
         }
     }
+
 }
