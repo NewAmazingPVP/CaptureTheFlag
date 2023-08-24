@@ -2,6 +2,7 @@ package mc.capturetheflag.listener;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.Particle;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -21,6 +22,7 @@ public class DetectBlock implements Listener {
         if (below.getBlock().getType() == Material.SPONGE) {
             player.playSound(player.getLocation(), "entity.blaze.shoot", 1.0f, 1.0f);
             player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 3, 55, true));
+            player.spawnParticle(Particle.CLOUD, player.getLocation().add(0, 1, 0), 100, 0.5, 0.5, 0.5, 0.1);
         }
     }
 }
