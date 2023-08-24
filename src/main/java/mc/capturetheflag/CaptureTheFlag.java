@@ -47,7 +47,7 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
                 updateBoard(board);
             }
         }, 0, 20);
-        AutoUpload.startReleaseChecker();
+        //AutoUpload.startReleaseChecker();
     }
 
     @EventHandler
