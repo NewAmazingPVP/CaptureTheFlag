@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryOpenEvent;
+import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.potion.PotionEffect;
@@ -17,7 +18,7 @@ public class Craft_table_detect implements Listener {
 
     @EventHandler
     public void onInventoryOpen(InventoryOpenEvent event) {
-        if (event.getInventory().getType() == org.bukkit.event.inventory.InventoryType.WORKBENCH) {
+        if (!(event.getInventory().getType() == InventoryType.PLAYER)) {
             event.setCancelled(true); // Cancel the event to prevent opening the crafting table
         }
     }
