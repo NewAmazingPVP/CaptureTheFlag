@@ -19,10 +19,14 @@ public class Blue_Banner_Click implements Listener {
 
 
     @EventHandler
-    public void onPlayerInteract(PlayerInteractEvent event) {
+    public void onPlayerMove(PlayerMoveEvent event) {
         Player player = (Player) event.getPlayer();
-        if (event.getAction() == Action.RIGHT_CLICK_BLOCK && event.getItem().getType().equals(Material.BLUE_BANNER)) {
+        Location to = event.getTo();
+        Location below = to.clone().subtract(0, 0, 0);
+
+        if (below.getBlock().getType() == Material.BLUE_BANNER) {
             player.sendMessage(ChatColor.DARK_GREEN + "Blue Picked Up!");
+            player.spawnParticle(Particle.COMPOSTER, player.getLocation().add(0, 1, 0), 100, 0.5, 0.5, 0.5, 0.1);
         }
     }
 }
