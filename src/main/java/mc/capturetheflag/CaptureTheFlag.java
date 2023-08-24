@@ -1,6 +1,7 @@
 package mc.capturetheflag;
 
 import mc.capturetheflag.game.PlayerMoney;
+import mc.capturetheflag.listener.Blue_Banner_Click;
 import mc.capturetheflag.listener.Craft_table_detect;
 import mc.capturetheflag.listener.DetectBlock;
 import mc.capturetheflag.listener.LaunchBall;
@@ -42,6 +43,7 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new DetectBlock(), this);
         getServer().getPluginManager().registerEvents(new LaunchBall(), this);
         getServer().getPluginManager().registerEvents(new Craft_table_detect(), this);
+        getServer().getPluginManager().registerEvents(new Blue_Banner_Click(), this);
 
         setupEconomy();
         getServer().getScheduler().runTaskTimer(this, () -> {
