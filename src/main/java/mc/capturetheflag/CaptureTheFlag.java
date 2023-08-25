@@ -1,5 +1,6 @@
 package mc.capturetheflag;
 
+import mc.capturetheflag.command.TeamJoin;
 import mc.capturetheflag.game.PlayerMoney;
 import mc.capturetheflag.listener.*;
 import mc.capturetheflag.scoreboard.FastBoard;
@@ -22,6 +23,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+import static mc.capturetheflag.game.TeamSelect.joinTeamBlue;
+import static mc.capturetheflag.game.TeamSelect.joinTeamRed;
 import static mc.capturetheflag.variables.Locations.lobbyLoc;
 
 public final class CaptureTheFlag extends JavaPlugin implements Listener {
@@ -36,6 +39,7 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
             getDataFolder().mkdirs();
         }
         captureTheFlag = this;
+        getCommand("join").setExecutor(new TeamJoin());
         getServer().getPluginManager().registerEvents(this, this);
         getServer().getPluginManager().registerEvents(new DetectBlock(), this);
         getServer().getPluginManager().registerEvents(new LaunchBall(), this);
@@ -65,11 +69,11 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         TextComponent message = new TextComponent(ChatColor.GOLD + "Select your team!\n");
 
         TextComponent discordText = new TextComponent(ChatColor.BLUE + "BLUE ");
-        discordText.setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "https://www.google.com/"));
+        discordText.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/join blue"));
         message.addExtra(discordText);
         message.addExtra("\n");
         TextComponent red = new TextComponent(ChatColor.RED + "RED ");
-        red.setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "https://www.google.com/"));
+        red.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/join red"));
         message.addExtra(red);
         new BukkitRunnable() {
             @Override

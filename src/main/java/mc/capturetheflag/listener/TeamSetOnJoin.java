@@ -13,7 +13,7 @@ import org.bukkit.scoreboard.Team;
 
 public class TeamSetOnJoin implements Listener {
 
-    @EventHandler
+    /*@EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
         // Get the player
         Player player = event.getPlayer();
@@ -35,15 +35,18 @@ public class TeamSetOnJoin implements Listener {
         // Add the player to the team
         team.addEntry(player.getName());
         team.setDisplayName(ChatColor.RED + "RED");
-    }
+    }*/
 
     @EventHandler
     public void onPlayerChat(AsyncPlayerChatEvent event) {
         Player player = event.getPlayer();
         Team team = player.getScoreboard().getPlayerTeam(player);
 
-        if (team != null && team.getName().equals("Not on a team")) {
-            event.setFormat(ChatColor.RED + "Not on a team" + ChatColor.RESET + " " + player.getName() + ": " + event.getMessage());
+        if (team != null && team.getName().equals("BLUE")) {
+            event.setFormat(ChatColor.BLUE + "BLUE" + ChatColor.RESET + " " + player.getName() + ": " + event.getMessage());
+        }
+        if (team != null && team.getName().equals("RED")) {
+            event.setFormat(ChatColor.RED + "RED" + ChatColor.RESET + " " + player.getName() + ": " + event.getMessage());
         }
     }
 }
