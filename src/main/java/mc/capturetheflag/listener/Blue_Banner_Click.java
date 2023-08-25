@@ -14,6 +14,8 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 
 import java.util.HashMap;
 import java.util.UUID;
@@ -38,6 +40,7 @@ public class Blue_Banner_Click implements Listener {
             location.getBlock().setType(blockType);
             ItemStack blueBanner = new ItemStack(Material.BLUE_BANNER);
             player.getEquipment().setItem(EquipmentSlot.HEAD, blueBanner);
+            PotionEffect effect = new PotionEffect(PotionEffectType.GLOWING, Integer.MAX_VALUE, 1);
             Sound sound = Sound.ENTITY_ENDER_DRAGON_GROWL;
             float volume = 1.0f;
             float pitch = 1.0f;
