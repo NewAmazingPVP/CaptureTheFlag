@@ -1,5 +1,6 @@
 package mc.capturetheflag;
 
+import mc.capturetheflag.command.LeaveTeam;
 import mc.capturetheflag.command.TeamJoin;
 import mc.capturetheflag.game.PlayerMoney;
 import mc.capturetheflag.listener.*;
@@ -40,6 +41,7 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         }
         captureTheFlag = this;
         getCommand("join").setExecutor(new TeamJoin());
+        getCommand("leave").setExecutor(new LeaveTeam());
         getServer().getPluginManager().registerEvents(this, this);
         getServer().getPluginManager().registerEvents(new DetectBlock(), this);
         getServer().getPluginManager().registerEvents(new LaunchBall(), this);
