@@ -6,3 +6,7 @@ commands:
   join:
     description: Join a team
     usage: /join <team>
+  leave:
+    description: Leave a team
+    usage: /leave
+
