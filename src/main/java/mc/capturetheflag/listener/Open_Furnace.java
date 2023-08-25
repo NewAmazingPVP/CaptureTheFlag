@@ -23,6 +23,7 @@ public class Open_Furnace implements Listener {
         if ((event.getInventory().getType() == InventoryType.FURNACE)) {
             event.setCancelled(true); // Cancel the event to prevent opening the crafting table
             player.openWorkbench(player.getLocation(), true);
+            player.sendMessage(ChatColor.DARK_RED + "What did yiu think would happen... A furnace opening" + ChatColor.DARK_GREEN + "( ˘•ω•˘ )");
         }
     }
 }
