@@ -8,7 +8,7 @@ import org.bukkit.event.inventory.InventoryOpenEvent;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class Open_Furnace extends JavaPlugin implements Listener {
+public class Open_Furnace implements Listener {
 
 
     @EventHandler

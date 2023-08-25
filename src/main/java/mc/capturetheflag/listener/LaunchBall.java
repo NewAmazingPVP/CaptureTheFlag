@@ -11,7 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-public class LaunchBall extends JavaPlugin implements Listener {
+public class LaunchBall implements Listener {
 
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
