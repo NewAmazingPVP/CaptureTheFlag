@@ -27,23 +27,24 @@ public class NoTeamArmor implements Listener {
 
         if (team != null && (team.getName().equals("RED") || team.getName().equals("BLUE"))) {
             ItemStack boots = new ItemStack(Material.LEATHER_BOOTS);
-            LeatherArmorMeta meta = (LeatherArmorMeta) boots.getItemMeta();
-            meta.setColor(Color.GRAY);
-            boots.setItemMeta(meta);
+            LeatherArmorMeta bootsMeta = (LeatherArmorMeta) boots.getItemMeta();
+            bootsMeta.setColor(Color.GRAY);
+            boots.setItemMeta(bootsMeta);
 
-            ItemStack legs = new ItemStack(Material.LEATHER_LEGGINGS);
-            LeatherArmorMeta dick = (LeatherArmorMeta) legs.getItemMeta();
-            dick.setColor(Color.GRAY);
-            legs.setItemMeta(dick);
+            ItemStack leggings = new ItemStack(Material.LEATHER_LEGGINGS);
+            LeatherArmorMeta leggingsMeta = (LeatherArmorMeta) leggings.getItemMeta();
+            leggingsMeta.setColor(Color.GRAY);
+            leggings.setItemMeta(leggingsMeta);
 
-            ItemStack chest = new ItemStack(Material.LEATHER_CHESTPLATE);
-            LeatherArmorMeta cock = (LeatherArmorMeta) chest.setItemMeta();
-            cock.setColor(Color.GRAY);
-            legs.setItemMeta(cock);
+            ItemStack chestplate = new ItemStack(Material.LEATHER_CHESTPLATE);
+            LeatherArmorMeta chestplateMeta = (LeatherArmorMeta) chestplate.getItemMeta();
+            chestplateMeta.setColor(Color.GRAY);
+            chestplate.setItemMeta(chestplateMeta);
 
             player.getInventory().setBoots(boots);
-            player.getInventory().setLeggings(legs);
-            player.getInventory().setChestplate(chest);
+            player.getInventory().setLeggings(leggings);
+            player.getInventory().setChestplate(chestplate);
         }
     }
+
 }
