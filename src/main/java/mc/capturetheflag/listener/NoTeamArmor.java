@@ -28,17 +28,17 @@ public class NoTeamArmor implements Listener {
         if (team != null && (team.getName().equals("RED") || team.getName().equals("BLUE"))) {
             ItemStack boots = new ItemStack(Material.LEATHER_BOOTS);
             LeatherArmorMeta bootsMeta = (LeatherArmorMeta) boots.getItemMeta();
-            bootsMeta.setColor(Color.GRAY);
+            bootsMeta.setColor(Color.BLACK);
             boots.setItemMeta(bootsMeta);
 
             ItemStack leggings = new ItemStack(Material.LEATHER_LEGGINGS);
             LeatherArmorMeta leggingsMeta = (LeatherArmorMeta) leggings.getItemMeta();
-            leggingsMeta.setColor(Color.GRAY);
+            leggingsMeta.setColor(Color.BLACK);
             leggings.setItemMeta(leggingsMeta);
 
             ItemStack chestplate = new ItemStack(Material.LEATHER_CHESTPLATE);
             LeatherArmorMeta chestplateMeta = (LeatherArmorMeta) chestplate.getItemMeta();
-            chestplateMeta.setColor(Color.GRAY);
+            chestplateMeta.setColor(Color.BLACK);
             chestplate.setItemMeta(chestplateMeta);
 
             player.getInventory().setBoots(boots);
