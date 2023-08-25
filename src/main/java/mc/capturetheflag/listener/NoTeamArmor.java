@@ -36,8 +36,14 @@ public class NoTeamArmor implements Listener {
             dick.setColor(Color.GRAY);
             legs.setItemMeta(dick);
 
+            ItemStack chest = new ItemStack(Material.LEATHER_CHESTPLATE);
+            LeatherArmorMeta cock = (LeatherArmorMeta) chest.setItemMeta();
+            cock.setColor(Color.GRAY);
+            legs.setItemMeta(cock);
+
             player.getInventory().setBoots(boots);
             player.getInventory().setLeggings(legs);
+            player.getInventory().setChestplate(chest);
         }
     }
 }
