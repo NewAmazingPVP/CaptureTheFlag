@@ -42,6 +42,8 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new Craft_table_detect(), this);
         getServer().getPluginManager().registerEvents(new Blue_Banner_Click(), this);
         getServer().getPluginManager().registerEvents(new Open_Furnace(), this);
+        getServer().getPluginManager().registerEvents(new LaunchTNT(), this);
+        getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
 
         setupEconomy();
         getServer().getScheduler().runTaskTimer(this, () -> {
