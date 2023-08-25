@@ -1,10 +1,7 @@
 package mc.capturetheflag;
 
 import mc.capturetheflag.game.PlayerMoney;
-import mc.capturetheflag.listener.Blue_Banner_Click;
-import mc.capturetheflag.listener.Craft_table_detect;
-import mc.capturetheflag.listener.DetectBlock;
-import mc.capturetheflag.listener.LaunchBall;
+import mc.capturetheflag.listener.*;
 import mc.capturetheflag.utility.AutoUpload;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -44,6 +41,7 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new LaunchBall(), this);
         getServer().getPluginManager().registerEvents(new Craft_table_detect(), this);
         getServer().getPluginManager().registerEvents(new Blue_Banner_Click(), this);
+        getServer().getPluginManager().registerEvents(new Open_Furnace(), this);
 
         setupEconomy();
         getServer().getScheduler().runTaskTimer(this, () -> {
