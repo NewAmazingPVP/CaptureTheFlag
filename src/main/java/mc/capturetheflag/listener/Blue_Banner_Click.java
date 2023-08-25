@@ -40,7 +40,7 @@ public class Blue_Banner_Click implements Listener {
             location.getBlock().setType(blockType);
             ItemStack blueBanner = new ItemStack(Material.BLUE_BANNER);
             player.getEquipment().setItem(EquipmentSlot.HEAD, blueBanner);
-            PotionEffect effect = new PotionEffect(PotionEffectType.GLOWING, Integer.MAX_VALUE, 1);
+            player.addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 999999999, 1, true));
             Sound sound = Sound.ENTITY_ENDER_DRAGON_GROWL;
             float volume = 1.0f;
             float pitch = 1.0f;
