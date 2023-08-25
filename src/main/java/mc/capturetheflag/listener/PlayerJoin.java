@@ -26,6 +26,5 @@ public class PlayerJoin implements Listener {
     public void onPlayerJoin(PlayerJoinEvent event) {
         Player player = (Player) event.getPlayer();
         player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "This game is under development so things may not work!");
-        player.displayName(ChatColor.DARK_GRAY + "Not In A Team")
         }
     }
