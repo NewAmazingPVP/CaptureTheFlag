@@ -40,6 +40,7 @@ public class Blue_Banner_Click implements Listener {
             for (Player all : Bukkit.getOnlinePlayers()) {
                 all.playSound(all.getLocation(), sound, volume, pitch);
 
+            }
         }
     }
 }
