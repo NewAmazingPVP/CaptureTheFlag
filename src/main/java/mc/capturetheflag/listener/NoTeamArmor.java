@@ -37,6 +37,7 @@ public class NoTeamArmor implements Listener {
             legs.setItemMeta(dick);
 
             player.getInventory().setBoots(boots);
+            player.getInventory().setLeggings(legs);
         }
     }
 }
