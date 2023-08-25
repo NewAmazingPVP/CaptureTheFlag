@@ -34,5 +34,6 @@ public class TeamSetOnJoin implements Listener {
         // Add the player to the team
         team.addEntry(player.getName());
         team.setDisplayName(ChatColor.RED + "RED");
+        player.setDisplayName(ChatColor.RED + "Not In A Team" + player.getDisplayName());
     }
 }
