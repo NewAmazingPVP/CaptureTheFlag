@@ -21,28 +21,28 @@ public class CancelArmorTakeoff implements Listener {
 
                 if (clickedItem != null && clickedItem.getType().name().contains("HELMET")) {
                     event.setCancelled(true);
-                    int slot = event.getSlot();
-                    player.getInventory().setItem(slot, new ItemStack(Material.AIR));
+                    player.getInventory().setItemInMainHand(null);
+                    player.setItemInHand(null);
                     player.sendMessage("You cannot remove your helmet!");
                 } else if (clickedItem != null && clickedItem.getType().name().contains("CHESTPLATE")) {
                     event.setCancelled(true);
-                    int slot = event.getSlot();
-                    player.getInventory().setItem(slot, new ItemStack(Material.AIR));
+                    player.getInventory().setItemInMainHand(null);
+                    player.setItemInHand(null);
                     player.sendMessage("You cannot remove your chestplate!");
                 } else if (clickedItem != null && clickedItem.getType().name().contains("LEGGINGS")) {
                     event.setCancelled(true);
-                    int slot = event.getSlot();
-                    player.getInventory().setItem(slot, new ItemStack(Material.AIR));
+                    player.getInventory().setItemInMainHand(null);
+                    player.setItemInHand(null);
                     player.sendMessage("You cannot remove your leggings!");
                 } else if (clickedItem != null && clickedItem.getType().name().contains("BOOTS")) {
                     event.setCancelled(true);
-                    int slot = event.getSlot();
-                    player.getInventory().setItem(slot, new ItemStack(Material.AIR));
+                    player.getInventory().setItemInMainHand(null);
+                    player.setItemInHand(null);
                     player.sendMessage("You cannot remove your boots!");
                 } else if (clickedItem != null && clickedItem.getType().name().contains("ARMOR")) {
                     event.setCancelled(true);
-                    int slot = event.getSlot();
-                    player.getInventory().setItem(slot, new ItemStack(Material.AIR));
+                    player.getInventory().setItemInMainHand(null);
+                    player.setItemInHand(null);
                     player.sendMessage("You cannot interact with armor items!");
                 }
             }
