@@ -8,6 +8,11 @@ import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.BannerMeta;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.Color;
+import org.bukkit.Material;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.LeatherArmorMeta;
 
 import java.util.HashMap;
 import java.util.UUID;
@@ -30,11 +35,11 @@ public class Blue_Banner_Click implements Listener {
             Material blockType = Material.AIR;
             Location location = new Location(world, -81, 71, 0);
             location.getBlock().setType(blockType);
-            ItemStack banner = new ItemStack(Material.BLUE_BANNER);
-            BannerMeta bannerMeta = (BannerMeta) banner.getItemMeta();
-            bannerMeta.setBaseColor(DyeColor.BLUE);
-            banner.setItemMeta(bannerMeta);
-            Sound sound = Sound.ENTITY_PLAYER_LEVELUP;
+            ItemStack helmet = new ItemStack(Material.BLUE_BANNER);
+            LeatherArmorMeta helmetItemMetaMeta = (LeatherArmorMeta) helmet.getItemMeta();
+            helmet.setItemMeta(helmetItemMetaMeta);
+            player.getInventory().setHelmet(helmet);
+            Sound sound = Sound.ENTITY_ENDER_DRAGON_GROWL;
             float volume = 1.0f;
             float pitch = 1.0f;
             for (Player all : Bukkit.getOnlinePlayers()) {
