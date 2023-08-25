@@ -16,6 +16,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -64,15 +65,20 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         player.teleport(lobbyLoc);
         TextComponent message = new TextComponent(ChatColor.GOLD + "Select your team!\n");
 
-        TextComponent discordText = new TextComponent(ChatColor.BLUE + "BLUE: ");
+        TextComponent discordText = new TextComponent(ChatColor.BLUE + "BLUE ");
         discordText.setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "https://www.google.com/"));
         message.addExtra(discordText);
         message.addExtra("\n");
-        TextComponent red = new TextComponent(ChatColor.RED + "RED: ");
+        TextComponent red = new TextComponent(ChatColor.RED + "RED ");
         red.setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "https://www.google.com/"));
         message.addExtra(red);
         message.addExtra("\n");
-        Bukkit.spigot().broadcast(message);
+        new BukkitRunnable() {
+            @Override
+            public void run() {
+                player.sendMessage(message);
+            }
+        }.runTaskLater(this, 20);
         player.sendTitle(ChatColor.DARK_AQUA + "Welcome!", "");
         player.getWorld().strikeLightningEffect(event.getPlayer().getLocation());
         PlayerMoney.setCoins(player, 0);
