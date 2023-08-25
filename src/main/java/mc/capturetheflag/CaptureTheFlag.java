@@ -40,6 +40,7 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new LaunchTNT(), this);
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new TeamSetOnJoin(), this);
+        getServer().getPluginManager().registerEvents(new ShearSheepTest(), this);
 
         setupEconomy();
         getServer().getScheduler().runTaskTimer(this, () -> {
