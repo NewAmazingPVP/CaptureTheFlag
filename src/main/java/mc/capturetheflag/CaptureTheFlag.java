@@ -45,6 +45,8 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new TeamSetOnJoin(), this);
         getServer().getPluginManager().registerEvents(new ShearSheepTest(), this);
+        getServer().getPluginManager().registerEvents(new KeepArmorOnNoTeam(), this);
+        getServer().getPluginManager().registerEvents(new NoTeamArmor(), this);
 
         setupEconomy();
         getServer().getScheduler().runTaskTimer(this, () -> {
@@ -63,10 +65,12 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         TextComponent message = new TextComponent(ChatColor.GOLD + "Select your team!\n");
 
         TextComponent discordText = new TextComponent(ChatColor.BLUE + "BLUE: ");
-        TextComponent discordLinkText = new TextComponent("Click here");
-        discordLinkText.setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "https://www.google.com/"));
-        discordText.addExtra(discordLinkText);
+        discordText.setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "https://www.google.com/"));
         message.addExtra(discordText);
+        message.addExtra("\n");
+        TextComponent red = new TextComponent(ChatColor.RED + "RED: ");
+        red.setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "https://www.google.com/"));
+        message.addExtra(red);
         message.addExtra("\n");
         Bukkit.spigot().broadcast(message);
         player.sendTitle(ChatColor.DARK_AQUA + "Welcome!", "");
