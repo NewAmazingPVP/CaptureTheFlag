@@ -10,7 +10,7 @@ import org.bukkit.Location;
 
 import static mc.capturetheflag.variables.Locations.jail;
 
-public class Jail implements CommandExecutor {
+public class jail_ctf implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (args.length == 1) {
