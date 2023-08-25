@@ -8,7 +8,7 @@ import org.bukkit.event.inventory.InventoryOpenEvent;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class Craft_table_detect extends JavaPlugin implements Listener {
+public class Craft_table_detect implements Listener {
 
 
     @EventHandler

@@ -11,7 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-public class LaunchTNT extends JavaPlugin implements Listener {
+public class LaunchTNT implements Listener {
 
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {

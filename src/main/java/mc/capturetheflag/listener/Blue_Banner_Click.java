@@ -10,7 +10,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class Blue_Banner_Click extends JavaPlugin implements Listener {
+public class Blue_Banner_Click implements Listener {
 
 
     @EventHandler
