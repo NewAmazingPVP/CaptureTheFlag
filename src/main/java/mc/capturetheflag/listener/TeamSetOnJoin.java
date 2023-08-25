@@ -30,7 +30,7 @@ public class TeamSetOnJoin implements Listener {
         // Set the team color to gray
         team.setColor(ChatColor.GRAY);
 
-        team.setPrefix(ChatColor.RED + "Not In A Team" + ChatColor.RESET + " ");
+        team.setPrefix(ChatColor.RED + "Not on a team" + ChatColor.RESET + " ");
 
         // Add the player to the team
         team.addEntry(player.getName());
@@ -43,7 +43,7 @@ public class TeamSetOnJoin implements Listener {
         Team team = player.getScoreboard().getPlayerTeam(player);
 
         if (team != null && team.getName().equals("Not on a team")) {
-            event.setFormat(ChatColor.RED + "Not In A Team" + ChatColor.RESET + " " + player.getName() + ": " + event.getMessage());
+            event.setFormat(ChatColor.RED + "Not on a team" + ChatColor.RESET + " " + player.getName() + ": " + event.getMessage());
         }
     }
 }

@@ -19,7 +19,7 @@ public class KeepArmorOnNoTeam implements Listener {
             Scoreboard scoreboard = Bukkit.getScoreboardManager().getMainScoreboard();
             Team team = scoreboard.getEntryTeam(player.getName());
 
-            if (team != null && team.getName().equals("Not In A Team")) {
+            if (team != null && team.getName().equals("Not on a team")) {
                 if (event.getSlotType() == InventoryType.SlotType.ARMOR && event.getCurrentItem().getType() == Material.LEATHER_BOOTS) {
                     event.setCancelled(true);
                 }
