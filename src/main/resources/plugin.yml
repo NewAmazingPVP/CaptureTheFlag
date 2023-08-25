@@ -9,7 +9,7 @@ commands:
   leave:
     description: Leave a team
     usage: /leave
-  Jail:
+  jail_ctf:
     description: put someone in jail (for testing)
     usage: /jail <name>
 
