@@ -71,7 +71,6 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         TextComponent red = new TextComponent(ChatColor.RED + "RED ");
         red.setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "https://www.google.com/"));
         message.addExtra(red);
-        message.addExtra("\n");
         new BukkitRunnable() {
             @Override
             public void run() {
