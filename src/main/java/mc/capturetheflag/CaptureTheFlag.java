@@ -4,6 +4,8 @@ import mc.capturetheflag.game.PlayerMoney;
 import mc.capturetheflag.listener.*;
 import mc.capturetheflag.scoreboard.FastBoard;
 import mc.capturetheflag.utility.AutoUpload;
+import net.md_5.bungee.api.chat.ClickEvent;
+import net.md_5.bungee.api.chat.TextComponent;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -18,6 +20,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
+
+import static mc.capturetheflag.variables.Locations.lobbyLoc;
 
 public final class CaptureTheFlag extends JavaPlugin implements Listener {
 
@@ -54,6 +58,17 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
+
+        player.teleport(lobbyLoc);
+        TextComponent message = new TextComponent(ChatColor.GOLD + "Select your team!\n");
+
+        TextComponent discordText = new TextComponent(ChatColor.BLUE + "BLUE: ");
+        TextComponent discordLinkText = new TextComponent("Click here");
+        discordLinkText.setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "https://www.google.com/"));
+        discordText.addExtra(discordLinkText);
+        message.addExtra(discordText);
+        message.addExtra("\n");
+        Bukkit.spigot().broadcast(message);
         player.sendTitle(ChatColor.DARK_AQUA + "Welcome!", "");
         player.getWorld().strikeLightningEffect(event.getPlayer().getLocation());
         PlayerMoney.setCoins(player, 0);
