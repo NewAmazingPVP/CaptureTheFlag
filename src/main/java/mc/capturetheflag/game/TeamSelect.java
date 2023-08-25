@@ -32,4 +32,18 @@ public class TeamSelect {
         team.addEntry(p.getName());
         team.setDisplayName(ChatColor.RED + "RED");
     }
+
+    public static void removeFromTeam(Player p){
+        Scoreboard scoreboard = Bukkit.getScoreboardManager().getMainScoreboard();
+        Team red = scoreboard.getTeam("RED");
+        if (red == null) {
+            return;
+        }
+        red.removeEntry(p.getName());
+        Team blue = scoreboard.getTeam("BLUE");
+        if (blue == null) {
+            return;
+        }
+        blue.removeEntry(p.getName());
+    }
 }
