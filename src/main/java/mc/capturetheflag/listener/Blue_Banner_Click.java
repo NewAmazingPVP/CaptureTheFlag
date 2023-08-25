@@ -26,6 +26,8 @@ public class Blue_Banner_Click implements Listener {
             int y = 71;
             int z = 0;
             Material blockType = Material.AIR;
+            Location location = new Location(world, -81, 71, 0);
+            location.getBlock().setType(blockType);
 
         }
     }
