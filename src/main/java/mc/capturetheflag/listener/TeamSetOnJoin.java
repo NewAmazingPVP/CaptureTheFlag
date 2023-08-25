@@ -29,6 +29,8 @@ public class TeamSetOnJoin extends JavaPlugin implements Listener {
         // Set the team color to gray
         team.setColor(ChatColor.GRAY);
 
+        team.setPrefix(ChatColor.RED + "Not In A Team" + ChatColor.RESET + " ");
+
         // Add the player to the team
         team.addEntry(player.getName());
         team.setDisplayName(ChatColor.RED + "RED");
