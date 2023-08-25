@@ -23,4 +23,3 @@ public class PlayerJoin implements Listener {
         player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "This game is under development so things may not work!");
         }
     }
-}
