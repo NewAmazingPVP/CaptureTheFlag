@@ -1,25 +1,13 @@
 package mc.capturetheflag.listener;
 
-import io.papermc.paper.event.player.PlayerNameEntityEvent;
-import mc.capturetheflag.game.PlayerMoney;
-import mc.capturetheflag.scoreboard.FastBoard;
-import net.kyori.adventure.text.format.TextColor;
 import org.bukkit.ChatColor;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.Particle;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.inventory.InventoryOpenEvent;
-import org.bukkit.event.inventory.InventoryType;
-import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerMoveEvent;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
+import org.bukkit.plugin.java.JavaPlugin;
 
-public class PlayerJoin implements Listener {
+public class PlayerJoin extends JavaPlugin implements Listener {
 
 
     @EventHandler

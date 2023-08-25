@@ -1,24 +1,18 @@
 package mc.capturetheflag;
 
 import mc.capturetheflag.game.PlayerMoney;
-import mc.capturetheflag.listener.*;
+import mc.capturetheflag.scoreboard.FastBoard;
 import mc.capturetheflag.utility.AutoUpload;
+import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.GameMode;
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
-import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.RegisteredServiceProvider;
-import mc.capturetheflag.scoreboard.FastBoard;
-import net.milkbowl.vault.economy.Economy;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -37,14 +31,14 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         }
         captureTheFlag = this;
         getServer().getPluginManager().registerEvents(this, this);
-        getServer().getPluginManager().registerEvents(new DetectBlock(), this);
+        /*getServer().getPluginManager().registerEvents(new DetectBlock(), this);
         getServer().getPluginManager().registerEvents(new LaunchBall(), this);
         getServer().getPluginManager().registerEvents(new Craft_table_detect(), this);
         getServer().getPluginManager().registerEvents(new Blue_Banner_Click(), this);
         getServer().getPluginManager().registerEvents(new Open_Furnace(), this);
         getServer().getPluginManager().registerEvents(new LaunchTNT(), this);
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
-        getServer().getPluginManager().registerEvents(new TeamSetOnJoin(), this);
+        getServer().getPluginManager().registerEvents(new TeamSetOnJoin(), this);*/
 
         setupEconomy();
         getServer().getScheduler().runTaskTimer(this, () -> {
