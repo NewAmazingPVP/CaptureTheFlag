@@ -29,7 +29,7 @@ public class Blue_Banner_Click implements Listener {
         Location below = to.clone().subtract(0, 0, 0);
 
         if (below.getBlock().getType() == Material.BLUE_BANNER) {
-            player.sendMessage(ChatColor.DARK_GREEN + "Blue Picked Up!");
+            player.sendMessage(ChatColor.DARK_BLUE + "Blue Picked Up!");
             player.spawnParticle(Particle.COMPOSTER, player.getLocation().add(0, 1, 0), 100, 0.5, 0.5, 0.5, 0.1);
             player.playSound(player.getLocation(), "minecraft:block.note_block.bit", 1.0f, 2.0f);
             int x = -81;

@@ -1,5 +1,6 @@
 package mc.capturetheflag.command;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -27,12 +28,12 @@ public class TeamJoin implements CommandExecutor {
 
         if (selectedTeam.equals("blue")) {
             joinTeamBlue(player);
-            player.sendMessage("You have joined the blue team!");
+            player.sendMessage(ChatColor.DARK_BLUE + "You have joined the blue team!");
         } else if (selectedTeam.equals("red")) {
             joinTeamRed(player);
-            player.sendMessage("You have joined the red team!");
+            player.sendMessage(ChatColor.DARK_RED + "You have joined the red team!");
         } else {
-            player.sendMessage("Invalid team. Available teams: blue, red");
+            player.sendMessage(ChatColor.RED + "Invalid team. Available teams: blue, red");
         }
 
         return true;
