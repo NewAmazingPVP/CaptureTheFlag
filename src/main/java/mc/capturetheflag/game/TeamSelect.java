@@ -8,6 +8,8 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.scoreboard.Scoreboard;
 import org.bukkit.scoreboard.Team;
 
+import static mc.capturetheflag.game.GetArmor.armorColor;
+
 public class TeamSelect {
     public static void joinTeamBlue(Player p){
         Scoreboard scoreboard = Bukkit.getScoreboardManager().getMainScoreboard();
@@ -19,6 +21,7 @@ public class TeamSelect {
         team.setPrefix(ChatColor.BLUE + "BLUE" + ChatColor.RESET + " ");
         team.addEntry(p.getName());
         team.setDisplayName(ChatColor.BLUE + "BLUE");
+        armorColor(p, "blue");
     }
 
     public static void joinTeamRed(Player p){
@@ -31,6 +34,7 @@ public class TeamSelect {
         team.setPrefix(ChatColor.RED + "RED" + ChatColor.RESET + " ");
         team.addEntry(p.getName());
         team.setDisplayName(ChatColor.RED + "RED");
+        armorColor(p, "red");
     }
 
     public static void removeFromTeam(Player p){
