@@ -25,7 +25,7 @@ public class NoTeamArmor implements Listener {
         Scoreboard scoreboard = Bukkit.getScoreboardManager().getMainScoreboard();
         Team team = scoreboard.getEntryTeam(player.getName());
 
-        if (team != null && team.getName().equals("Not on a team")) {
+        if (team != null && (team.getName().equals("RED") || team.getName().equals("BLUE"))) {
             ItemStack boots = new ItemStack(Material.LEATHER_BOOTS);
             LeatherArmorMeta meta = (LeatherArmorMeta) boots.getItemMeta();
             meta.setColor(Color.GRAY);
