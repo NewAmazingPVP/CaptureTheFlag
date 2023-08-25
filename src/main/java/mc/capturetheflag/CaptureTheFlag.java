@@ -45,7 +45,6 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new TeamSetOnJoin(), this);
         getServer().getPluginManager().registerEvents(new ShearSheepTest(), this);
-        getServer().getPluginManager().registerEvents(new KeepArmorOnNoTeam(), this);
         getServer().getPluginManager().registerEvents(new NoTeamArmor(), this);
 
         setupEconomy();
