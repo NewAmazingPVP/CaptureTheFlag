@@ -91,7 +91,7 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         player.getWorld().strikeLightningEffect(event.getPlayer().getLocation());
         PlayerMoney.setCoins(player, 0);
         FastBoard board = new FastBoard(player);
-        board.updateTitle(ChatColor.AQUA + "" + ChatColor.BOLD + "Capture The Flag");
+        board.updateTitle(ChatColor.DARK_BLUE + "" + ChatColor.BOLD + "Capture" + "" + ChatColor.DARK_RED + "The Flag");
         this.boards.put(player.getUniqueId(), board);
     }
 
@@ -117,13 +117,13 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         board.updateLines(
                 "",
                 ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "--------------------",
-                ChatColor.GREEN + "" + ChatColor.BOLD +  "Time Left: ",
-                ChatColor.DARK_GREEN + "" + ChatColor.BOLD +  "Rounds Left",
+                ChatColor.GREEN + "" + ChatColor.BOLD +  "Time Left:",
+                ChatColor.DARK_GREEN + "" + ChatColor.BOLD +  "Rounds Left:",
                 ChatColor.DARK_PURPLE + "" + ChatColor.BOLD +  "--------------------",
-                ChatColor.DARK_AQUA + "" + ChatColor.BOLD +  "Souls: ",
+                ChatColor.DARK_AQUA + "" + ChatColor.BOLD +  "Souls:",
                 ChatColor.DARK_PURPLE + "" + ChatColor.BOLD +  "--------------------",
-                ChatColor.DARK_BLUE + "" + ChatColor.BOLD +  "Blue Score",
-                ChatColor.DARK_RED + "" + ChatColor.BOLD +  "Red Score",
+                ChatColor.DARK_BLUE + "" + ChatColor.BOLD +  "Blue Score:",
+                ChatColor.DARK_RED + "" + ChatColor.BOLD +  "Red Score:",
                 ChatColor.DARK_PURPLE + "" + ChatColor.BOLD +  "--------------------"
 
         );
