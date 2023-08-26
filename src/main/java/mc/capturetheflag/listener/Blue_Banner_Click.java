@@ -16,6 +16,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
+import org.bukkit.scoreboard.Team;
 
 import java.util.HashMap;
 import java.util.UUID;
@@ -23,12 +24,13 @@ import java.util.UUID;
 public class Blue_Banner_Click implements Listener {
     @EventHandler
     public void onPlayerMove(PlayerMoveEvent event) {
+        Team team = player.getPlayerTeam();
         Player player = (Player) event.getPlayer();
         World world = player.getWorld();
         Location to = event.getTo();
         Location below = to.clone().subtract(0, 0, 0);
 
-        if (below.getBlock().getType() == Material.BLUE_BANNER) {
+        if (below.getBlock().getType() == Material.BLUE_BANNER)(team != null && team.getName().equalsIgnoreCase("red")) {
             player.sendMessage(ChatColor.DARK_BLUE + "Blue Picked Up!");
             player.spawnParticle(Particle.COMPOSTER, player.getLocation().add(0, 1, 0), 100, 0.5, 0.5, 0.5, 0.1);
             player.playSound(player.getLocation(), "minecraft:block.note_block.bit", 1.0f, 2.0f);
