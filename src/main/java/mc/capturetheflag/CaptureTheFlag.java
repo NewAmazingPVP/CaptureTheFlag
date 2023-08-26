@@ -87,7 +87,7 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
                 player.sendMessage(message);
             }
         }.runTaskLater(this, 20);
-        player.sendTitle(ChatColor.DARK_AQUA + "Welcome!", "");
+        player.sendTitle(ChatColor.DARK_AQUA + "Welcome To CTF!", "");
         player.getWorld().strikeLightningEffect(event.getPlayer().getLocation());
         PlayerMoney.setCoins(player, 0);
         FastBoard board = new FastBoard(player);
