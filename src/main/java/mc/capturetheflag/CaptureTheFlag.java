@@ -101,7 +101,7 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         player.getWorld().strikeLightningEffect(event.getPlayer().getLocation());
         PlayerMoney.setCoins(player, 0);
         FastBoard board = new FastBoard(player);
-        board.updateTitle(ChatColor.DARK_BLUE + "" + ChatColor.BOLD + "Capture" + "" + ChatColor.DARK_RED + "" + ChatColor.BOLD + " The Flag");
+        board.updateTitle(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Capture" + "" + ChatColor.DARK_BLUE + "" + ChatColor.BOLD + " The Flag");
         this.boards.put(player.getUniqueId(), board);
     }
 

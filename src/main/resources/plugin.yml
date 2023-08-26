@@ -10,6 +10,9 @@ commands:
     description: Leave a team
     usage: /leave
   jail_ctf:
-    description: put someone in jail (for testing)
+    description: Put someone in jail (for testing)
     usage: /jail <name>
+  start_ctf:
+    description: Starts CTF
+    usage: /start_ctf
 
