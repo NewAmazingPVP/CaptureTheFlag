@@ -33,15 +33,11 @@ public class Blue_Banner_Click implements Listener {
         Location below = to.clone().subtract(0, 0, 0);
 
         if (below.getBlock().getType() == Material.BLUE_BANNER && team != null && team.getName().equalsIgnoreCase("red")) {
-            player.sendMessage(ChatColor.DARK_BLUE + "Blue Picked Up!");
+            player.sendMessage(ChatColor.DARK_BLUE + "Blue Flag Picked Up!");
             player.spawnParticle(Particle.COMPOSTER, player.getLocation().add(0, 1, 0), 100, 0.5, 0.5, 0.5, 0.1);
             player.playSound(player.getLocation(), "minecraft:block.note_block.bit", 1.0f, 2.0f);
-            int x = -81;
-            int y = 71;
-            int z = 0;
-            Material blockType = Material.AIR;
-            Location location = new Location(world, -81, 71, 0);
-            location.getBlock().setType(blockType);
+            Location location = player.getLocation();
+            location.getBlock().setType(Material.AIR);
             ItemStack blueBanner = new ItemStack(Material.BLUE_BANNER);
             player.getEquipment().setItem(EquipmentSlot.HEAD, blueBanner);
             player.addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 999999999, 1, true));
