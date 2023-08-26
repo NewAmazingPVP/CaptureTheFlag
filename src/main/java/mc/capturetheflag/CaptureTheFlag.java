@@ -70,7 +70,7 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
     @Override
     public void onDisable() {
     for(Player p : Bukkit.getOnlinePlayers()){
-        p.performCommand("/leave");
+        p.performCommand("leave");
         p.clearActivePotionEffects();
         }
     }
