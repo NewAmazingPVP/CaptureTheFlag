@@ -1,5 +1,6 @@
 package mc.capturetheflag.listener;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -12,28 +13,28 @@ public class TeamSelectMenuLis implements Listener {
 
     @EventHandler
     public void onMenuClick(InventoryClickEvent event) {
+        Player player = event.getPlayer();
         //this is for the team select menu thing good luck de bugging xD
         if(event.getView().getTitle().equalsIgnoreCase(ChatColor.DARK_AQUA + "[Select Team]")) {
-            event.setCancelled(true);
+
 
 
             if (event.getCurrentItem() == null) {
                 return;
-
             }
-
             if (event.getCurrentItem().getType() == Material.RED_CONCRETE) {
-                System.out.println(ChatColor.DARK_RED + "Joined Red!");
+                Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "/join red");
 
             } else if (event.getCurrentItem().getType() == Material.BLUE_CONCRETE) {
-                System.out.println(ChatColor.DARK_BLUE + "Joined Blue!");
+                Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "/join blue");
             }
+
+
+            event.setCancelled(true);
 
         }
 
-
-
-
     }
+
 }
 
