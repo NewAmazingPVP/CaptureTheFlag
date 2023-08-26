@@ -114,11 +114,7 @@ public class TeamSelectItem implements Listener {
 
                 ItemStack g26 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
                 teamselect.setItem(26,g26);
-
-                ItemStack g27 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(27,g27);
-
-
+                
 
                 p.openInventory(teamselect);
 
