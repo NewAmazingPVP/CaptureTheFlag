@@ -14,19 +14,21 @@ public class TeamSelectMenuLis implements Listener {
     public void onMenuClick(InventoryClickEvent event) {
         //this is for the team select menu thing good luck de bugging xD
         if(event.getView().getTitle().equalsIgnoreCase(ChatColor.DARK_AQUA + "[Select Team]")) {
-            event.setCancelled(true);
+
 
 
             if (event.getCurrentItem() == null) {
-                return;
+                event.setCancelled(true);
 
             }
 
             if (event.getCurrentItem().getType() == Material.RED_CONCRETE) {
                 System.out.println(ChatColor.DARK_RED + "Joined Red!");
+                event.setCancelled(true);
 
             } else if (event.getCurrentItem().getType() == Material.BLUE_CONCRETE) {
                 System.out.println(ChatColor.DARK_BLUE + "Joined Blue!");
+                event.setCancelled(true);
             }
 
         }
