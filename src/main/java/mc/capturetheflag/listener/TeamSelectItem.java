@@ -26,7 +26,7 @@ public class TeamSelectItem implements Listener {
                 // Perform your desired action here
                 Player p = event.getPlayer();
                 player.playSound(player.getLocation(), "minecraft:block.note_block.bit", 1.0f, 2.0f);
-                Inventory teamselect = Bukkit.createInventory(p,27, ChatColor.DARK_AQUA + "[Select Team]");
+                Inventory teamselect = Bukkit.createInventory(p, 27, ChatColor.DARK_AQUA + "[Select Team]");
 
                 ItemStack rteam = new ItemStack(Material.RED_CONCRETE);
                 ItemMeta RMeta = rteam.getItemMeta();
@@ -38,9 +38,9 @@ public class TeamSelectItem implements Listener {
                 ItemMeta BMeta = bteam.getItemMeta();
                 BMeta.setDisplayName(ChatColor.YELLOW + "" + ChatColor.BOLD + "Click" + ChatColor.DARK_BLUE + " To Join Blue");
                 bteam.setItemMeta(BMeta);
-                teamselect.setItem(15,bteam);
+                teamselect.setItem(15, bteam);
 
-                ItemStack g0 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
+                /*ItemStack g0 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
                 teamselect.setItem(0,g0);
 
                 ItemStack g1 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
@@ -116,7 +116,7 @@ public class TeamSelectItem implements Listener {
                 teamselect.setItem(26,g26);
 
                 ItemStack g27 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(27,g27);
+                teamselect.setItem(27,g27);*/
 
 
 
