@@ -27,11 +27,22 @@ public class TeamSelectItem implements Listener {
                 Player p = event.getPlayer();
                 player.playSound(player.getLocation(), "minecraft:block.note_block.bit", 1.0f, 2.0f);
                 Inventory inventory = Bukkit.createInventory(p,27, ChatColor.DARK_AQUA + "[Select Team]");
-                ItemStack item = new ItemStack(Material.RED_CONCRETE);
-                ItemMeta itemMeta = item.getItemMeta();
-                itemMeta.setDisplayName(ChatColor.YELLOW + "" + ChatColor.BOLD + "Click" + ChatColor.DARK_RED + "To Join Red");
-                item.setItemMeta(itemMeta);
-                inventory.setItem(1, item);
+
+
+                ItemStack rteam = new ItemStack(Material.RED_CONCRETE);
+                ItemMeta RMeta = rteam.getItemMeta();
+                RMeta.setDisplayName(ChatColor.YELLOW + "" + ChatColor.BOLD + "Click" + ChatColor.DARK_RED + " To Join Red");
+                rteam.setItemMeta(RMeta);
+                inventory.setItem(12, rteam);
+
+
+                ItemStack bteam = new ItemStack(Material.BLUE_CONCRETE);
+                ItemMeta BMeta = bteam.getItemMeta();
+                BMeta.setDisplayName(ChatColor.YELLOW + "" + ChatColor.BOLD + "Click" + ChatColor.DARK_BLUE + " To Join Blue");
+                bteam.setItemMeta(BMeta);
+                inventory.setItem(16,bteam);
+
+
                 p.openInventory(inventory);
 
             }
