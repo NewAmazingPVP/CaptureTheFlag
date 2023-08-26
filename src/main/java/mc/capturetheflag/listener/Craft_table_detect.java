@@ -10,6 +10,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Craft_table_detect implements Listener {
 
+}
+
 
     /*@EventHandler
     public void onInventoryOpen(InventoryOpenEvent event) {
