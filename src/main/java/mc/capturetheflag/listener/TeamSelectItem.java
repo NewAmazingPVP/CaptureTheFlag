@@ -73,9 +73,6 @@ public class TeamSelectItem implements Listener {
                 ItemStack g10 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
                 teamselect.setItem(10,g10);
 
-                /*ItemStack g11 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(11,g11);*/
-
                 ItemStack g12 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
                 teamselect.setItem(12,g12);
 
