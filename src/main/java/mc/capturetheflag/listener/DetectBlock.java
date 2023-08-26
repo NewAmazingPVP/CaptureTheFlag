@@ -17,7 +17,7 @@ public class DetectBlock implements Listener {
     public void onPlayerMove(PlayerMoveEvent event) {
         Player player = event.getPlayer();
         Location to = event.getTo();
-        Location below = to.clone().subtract(0, 1, 0);
+        Location below = to.clone().subtract(0, 2, 0);
 
         if (below.getBlock().getType() == Material.SPONGE) {
             player.playSound(player.getLocation(), "minecraft:block.slime_block.fall", 1.0f, 1.0f);
