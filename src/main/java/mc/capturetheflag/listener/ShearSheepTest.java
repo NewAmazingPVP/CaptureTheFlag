@@ -21,6 +21,7 @@ public class ShearSheepTest implements Listener {
             sheep.setHealth(0.0);
             player.sendMessage(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Shit u killed it! That is NOT how you shear a sheep!");
             player.playSound(player.getLocation(), "minecraft:entity.slime.death", 1.0f, 1.0f);
+            player.damage(5);
         }
     }
 }
