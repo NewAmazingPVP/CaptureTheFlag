@@ -13,7 +13,6 @@ public class TeamSelectMenuLis implements Listener {
 
     @EventHandler
     public void onMenuClick(InventoryClickEvent event) {
-        Player player = event.getPlayer();
         //this is for the team select menu thing good luck de bugging xD
         if(event.getView().getTitle().equalsIgnoreCase(ChatColor.DARK_AQUA + "[Select Team]")) {
 
