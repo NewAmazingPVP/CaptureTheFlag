@@ -28,19 +28,7 @@ public class TeamSelectItem implements Listener {
                 player.playSound(player.getLocation(), "minecraft:block.note_block.bit", 1.0f, 2.0f);
                 Inventory teamselect = Bukkit.createInventory(p, 27, ChatColor.DARK_AQUA + "[Select Team]");
 
-                ItemStack rteam = new ItemStack(Material.RED_CONCRETE);
-                ItemMeta RMeta = rteam.getItemMeta();
-                RMeta.setDisplayName(ChatColor.YELLOW + "" + ChatColor.BOLD + "Click" + ChatColor.DARK_RED + " To Join Red");
-                rteam.setItemMeta(RMeta);
-                teamselect.setItem(11, rteam);
-
-                ItemStack bteam = new ItemStack(Material.BLUE_CONCRETE);
-                ItemMeta BMeta = bteam.getItemMeta();
-                BMeta.setDisplayName(ChatColor.YELLOW + "" + ChatColor.BOLD + "Click" + ChatColor.DARK_BLUE + " To Join Blue");
-                bteam.setItemMeta(BMeta);
-                teamselect.setItem(15, bteam);
-
-                /*ItemStack g0 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
+                ItemStack g0 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
                 teamselect.setItem(0,g0);
 
                 ItemStack g1 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
@@ -73,6 +61,12 @@ public class TeamSelectItem implements Listener {
                 ItemStack g10 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
                 teamselect.setItem(10,g10);
 
+                ItemStack rteam = new ItemStack(Material.RED_CONCRETE);
+                ItemMeta RMeta = rteam.getItemMeta();
+                RMeta.setDisplayName(ChatColor.YELLOW + "" + ChatColor.BOLD + "Click" + ChatColor.DARK_RED + " To Join Red");
+                rteam.setItemMeta(RMeta);
+                teamselect.setItem(11, rteam);
+
                 ItemStack g12 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
                 teamselect.setItem(12,g12);
 
@@ -81,6 +75,12 @@ public class TeamSelectItem implements Listener {
 
                 ItemStack g14 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
                 teamselect.setItem(14,g14);
+
+                ItemStack bteam = new ItemStack(Material.BLUE_CONCRETE);
+                ItemMeta BMeta = bteam.getItemMeta();
+                BMeta.setDisplayName(ChatColor.YELLOW + "" + ChatColor.BOLD + "Click" + ChatColor.DARK_BLUE + " To Join Blue");
+                bteam.setItemMeta(BMeta);
+                teamselect.setItem(15, bteam);
 
                 ItemStack g16 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
                 teamselect.setItem(16,g16);
@@ -116,7 +116,7 @@ public class TeamSelectItem implements Listener {
                 teamselect.setItem(26,g26);
 
                 ItemStack g27 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(27,g27);*/
+                teamselect.setItem(27,g27);
 
 
 
