@@ -38,7 +38,7 @@ public class Red_Banner_Click implements Listener {
             player.playSound(player.getLocation(), "minecraft:block.note_block.bit", 1.0f, 2.0f);
             Location location = player.getLocation();
             location.getBlock().setType(Material.AIR);
-            ItemStack blueBanner = new ItemStack(Material.BLUE_BANNER);
+            ItemStack blueBanner = new ItemStack(Material.RED_BANNER);
             player.getEquipment().setItem(EquipmentSlot.HEAD, blueBanner);
             player.addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 999999999, 1, true));
             Sound sound = Sound.ENTITY_ENDER_DRAGON_GROWL;
