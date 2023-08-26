@@ -122,7 +122,7 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
                 "",
                 ChatColor.DARK_AQUA + "" + ChatColor.BOLD +  "Souls:",
                 ChatColor.DARK_PURPLE + "" + ChatColor.BOLD +  "--------------------",
-                ChatColor.AQUA + "" + ChatColor.BOLD + "              Scores       ",
+                ChatColor.AQUA + "" + ChatColor.BOLD + "           Scores       ",
                 "",
                 ChatColor.DARK_BLUE + "" + ChatColor.BOLD +  "Blue:",
                 "",
