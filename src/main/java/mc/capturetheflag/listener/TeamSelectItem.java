@@ -44,82 +44,82 @@ public class TeamSelectItem implements Listener {
                 teamselect.setItem(0,g0);
 
                 ItemStack g1 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g1);
+                teamselect.setItem(1,g1);
 
                 ItemStack g2 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g2);
+                teamselect.setItem(2,g2);
 
                 ItemStack g3 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g3);
+                teamselect.setItem(3,g3);
 
                 ItemStack g4 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g4);
+                teamselect.setItem(4,g4);
 
                 ItemStack g5 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g5);
+                teamselect.setItem(5,g5);
 
                 ItemStack g6 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g6);
+                teamselect.setItem(6,g6);
 
                 ItemStack g7 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g7);
+                teamselect.setItem(7,g7);
 
                 ItemStack g8 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g8);
+                teamselect.setItem(8,g8);
 
                 ItemStack g9 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g9);
+                teamselect.setItem(9,g9);
 
                 ItemStack g10 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g10);
+                teamselect.setItem(10,g10);
 
-                ItemStack g11 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g11);
+                /*ItemStack g11 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
+                teamselect.setItem(11,g11);*/
 
                 ItemStack g12 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g12);
+                teamselect.setItem(12,g12);
 
                 ItemStack g13 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g13);
+                teamselect.setItem(13,g13);
 
                 ItemStack g14 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g14);
+                teamselect.setItem(14,g14);
 
                 ItemStack g16 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g16);
+                teamselect.setItem(16,g16);
 
                 ItemStack g17 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g17);
+                teamselect.setItem(17,g17);
 
                 ItemStack g18 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g18);
+                teamselect.setItem(18,g18);
 
                 ItemStack g19 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g19);
+                teamselect.setItem(19,g19);
 
                 ItemStack g20 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g20);
+                teamselect.setItem(20,g20);
 
                 ItemStack g21 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g21);
+                teamselect.setItem(21,g21);
 
                 ItemStack g22 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g22);
+                teamselect.setItem(22,g22);
 
                 ItemStack g23 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g23);
+                teamselect.setItem(23,g23);
 
                 ItemStack g24 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g24);
+                teamselect.setItem(24,g24);
 
                 ItemStack g25 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g25);
+                teamselect.setItem(25,g25);
 
                 ItemStack g26 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g26);
+                teamselect.setItem(26,g26);
 
                 ItemStack g27 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(0,g27);
+                teamselect.setItem(27,g27);
 
 
 
