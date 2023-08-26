@@ -67,6 +67,14 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         AutoUpload.startReleaseChecker();
     }
 
+    @Override
+    public void onDisable() {
+    for(Player p : Bukkit.getOnlinePlayers()){
+        p.performCommand("/leave");
+        p.clearActivePotionEffects();
+        }
+    }
+
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
