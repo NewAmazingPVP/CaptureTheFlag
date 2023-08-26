@@ -126,17 +126,17 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
 
         board.updateLines(
                 ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "--------------------",
-                ChatColor.GREEN + "" + ChatColor.BOLD +  "Time Left:",
+                ChatColor.GREEN + "" + ChatColor.BOLD +  "Time Left: N/A",
                 "",
-                ChatColor.DARK_GREEN + "" + ChatColor.BOLD +  "Rounds Left:",
+                ChatColor.DARK_GREEN + "" + ChatColor.BOLD +  "Rounds Left: N/A",
                 "",
-                ChatColor.DARK_AQUA + "" + ChatColor.BOLD +  "Souls:",
+                ChatColor.DARK_AQUA + "" + ChatColor.BOLD +  "Souls: N/A",
                 ChatColor.DARK_PURPLE + "" + ChatColor.BOLD +  "--------------------",
                 ChatColor.AQUA + "" + ChatColor.BOLD + "           Scores       ",
                 "",
-                ChatColor.DARK_BLUE + "" + ChatColor.BOLD +  "Blue:",
+                ChatColor.DARK_BLUE + "" + ChatColor.BOLD +  "Blue: N/A",
                 "",
-                ChatColor.DARK_RED + "" + ChatColor.BOLD +  "Red:",
+                ChatColor.DARK_RED + "" + ChatColor.BOLD +  "Red: N/A",
                 ChatColor.DARK_PURPLE + "" + ChatColor.BOLD +  "--------------------"
 
         );
