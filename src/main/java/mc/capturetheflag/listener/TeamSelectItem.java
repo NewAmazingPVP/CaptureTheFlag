@@ -22,7 +22,7 @@ public class TeamSelectItem implements Listener {
             Player player = event.getPlayer();
             ItemStack heldItem = player.getInventory().getItemInMainHand();
 
-            if (heldItem.getType() == Material.COMPASS) {
+            if (heldItem.getType() == Material.RECOVERY_COMPASS) {
                 // Perform your desired action here
                 Player p = event.getPlayer();
                 player.playSound(player.getLocation(), "minecraft:block.note_block.bit", 1.0f, 2.0f);
