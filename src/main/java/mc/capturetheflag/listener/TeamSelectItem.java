@@ -11,6 +11,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 
 public class TeamSelectItem implements Listener {
@@ -26,6 +27,12 @@ public class TeamSelectItem implements Listener {
                 Player p = event.getPlayer();
                 player.playSound(player.getLocation(), "minecraft:block.note_block.bit", 1.0f, 2.0f);
                 Inventory inventory = Bukkit.createInventory(p,27, ChatColor.DARK_AQUA + "[Select Team]");
+                ItemStack item = new ItemStack(Material.RED_CONCRETE);
+                ItemMeta itemMeta = item.getItemMeta();
+                itemMeta.setDisplayName(ChatColor.YELLOW + "" + ChatColor.BOLD + "Click" + ChatColor.DARK_RED + "To Join Red");
+                item.setItemMeta(itemMeta);
+                inventory.setItem(1, item);
+                p.openInventory(inventory);
 
             }
         }
