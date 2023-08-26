@@ -19,24 +19,6 @@ public class jail_ctf implements CommandExecutor {
             player.teleport(jail);
             player.sendMessage(ChatColor.RED + "You were killed!");
 
-            ItemStack boots = new ItemStack(Material.LEATHER_BOOTS);
-            LeatherArmorMeta bootsMeta = (LeatherArmorMeta) boots.getItemMeta();
-            bootsMeta.setColor(Color.ORANGE);
-            boots.setItemMeta(bootsMeta);
-
-            ItemStack leggings = new ItemStack(Material.LEATHER_LEGGINGS);
-            LeatherArmorMeta leggingsMeta = (LeatherArmorMeta) leggings.getItemMeta();
-            leggingsMeta.setColor(Color.ORANGE);
-            leggings.setItemMeta(leggingsMeta);
-
-            ItemStack chestplate = new ItemStack(Material.LEATHER_CHESTPLATE);
-            LeatherArmorMeta chestplateMeta = (LeatherArmorMeta) chestplate.getItemMeta();
-            chestplateMeta.setColor(Color.ORANGE);
-            chestplate.setItemMeta(chestplateMeta);
-
-            player.getInventory().setBoots(boots);
-            player.getInventory().setLeggings(leggings);
-            player.getInventory().setChestplate(chestplate);
         } else {
             sender.sendMessage("Specify player");
         }
