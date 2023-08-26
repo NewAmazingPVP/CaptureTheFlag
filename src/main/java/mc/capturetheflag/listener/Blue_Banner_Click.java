@@ -3,6 +3,7 @@ package mc.capturetheflag.listener;
 import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.EquipmentSlot;
@@ -27,7 +28,7 @@ import static mc.capturetheflag.game.GetTeam.getCurrentTeam;
 public class Blue_Banner_Click implements Listener {
     private final Map<UUID, Long> flagCooldowns = new HashMap<>();
     private static final long FLAG_COOLDOWN_TIME = 1000; //milliseconds
-    @EventHandler
+    @EventHandler(priority = EventPriority.HIGH)
     public void onPlayerMove(PlayerMoveEvent event) {
         Player player = (Player) event.getPlayer();
         Team team = getCurrentTeam(player);
@@ -44,7 +45,6 @@ public class Blue_Banner_Click implements Listener {
 
         if (to.getBlock().getType() == Material.BLUE_BANNER && team != null && team.getName().equalsIgnoreCase("red")) {
             player.sendMessage(ChatColor.DARK_BLUE + "Blue Flag Picked Up!");
-            flagCooldowns.put(player.getUniqueId(), System.currentTimeMillis() + FLAG_COOLDOWN_TIME);
             player.spawnParticle(Particle.COMPOSTER, player.getLocation().add(0, 1, 0), 100, 0.5, 0.5, 0.5, 0.1);
             player.playSound(player.getLocation(), "minecraft:block.note_block.bit", 1.0f, 2.0f);
             Location location = player.getLocation();
@@ -57,8 +57,8 @@ public class Blue_Banner_Click implements Listener {
             float pitch = 1.0f;
             for (Player all : Bukkit.getOnlinePlayers()) {
                 all.playSound(all.getLocation(), sound, volume, pitch);
-
             }
+            flagCooldowns.put(player.getUniqueId(), System.currentTimeMillis() + FLAG_COOLDOWN_TIME);
         }
     }
 }
