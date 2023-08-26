@@ -17,7 +17,8 @@ public class jail_ctf implements CommandExecutor {
             Player player = Bukkit.getPlayer(args[0]);
             assert player != null;
             player.teleport(jail);
-            player.sendMessage(ChatColor.RED + "You were killed!");
+            player.sendMessage(ChatColor.RED + "You were killed!... this is just a tes location idk...");
+            player.setGameMode(GameMode.ADVENTURE);
 
         } else {
             sender.sendMessage("Specify player");
