@@ -23,9 +23,15 @@ public class TeamSelectMenuLis implements Listener {
             }
             if (event.getCurrentItem().getType() == Material.RED_CONCRETE) {
                 Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "/join red");
+                Player player = (Player) event.getView().getPlayer();
+                player.performCommand("join red");
 
             } else if (event.getCurrentItem().getType() == Material.BLUE_CONCRETE) {
 
+                Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "/join blue");
+                Player player = (Player) event.getView().getPlayer();
+                player.performCommand("join blue");
+                
             }
 
 
