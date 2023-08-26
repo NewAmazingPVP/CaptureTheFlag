@@ -125,19 +125,19 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         int coins = PlayerMoney.getCoins(board.getPlayer());
 
         board.updateLines(
-                ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "---------------",
+                ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "--------------------",
                 ChatColor.GREEN + "" + ChatColor.BOLD +  "Time Left:",
                 "",
                 ChatColor.DARK_GREEN + "" + ChatColor.BOLD +  "Rounds Left:",
                 "",
                 ChatColor.DARK_AQUA + "" + ChatColor.BOLD +  "Souls:",
-                ChatColor.DARK_PURPLE + "" + ChatColor.BOLD +  "---------------",
+                ChatColor.DARK_PURPLE + "" + ChatColor.BOLD +  "--------------------",
                 ChatColor.AQUA + "" + ChatColor.BOLD + "           Scores       ",
                 "",
                 ChatColor.DARK_BLUE + "" + ChatColor.BOLD +  "Blue:",
                 "",
                 ChatColor.DARK_RED + "" + ChatColor.BOLD +  "Red:",
-                ChatColor.DARK_PURPLE + "" + ChatColor.BOLD +  "---------------"
+                ChatColor.DARK_PURPLE + "" + ChatColor.BOLD +  "--------------------"
 
         );
     }
