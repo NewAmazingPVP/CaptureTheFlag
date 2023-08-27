@@ -6,6 +6,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.LeatherArmorMeta;
 
 public class TeamSelectMenuLis implements Listener {
 
@@ -40,6 +41,24 @@ public class TeamSelectMenuLis implements Listener {
                 player.performCommand("leave");
                 player.playSound(player.getLocation(), "minecraft:block.note_block.pling", 1.0f, 5.0f);
                 player.getWorld().spawnParticle(Particle.REDSTONE, player.getLocation(), 10, 0.6, 0.6, 0.0, new Particle.DustOptions(Color.BLACK, 3));
+                ItemStack boots = new ItemStack(Material.LEATHER_BOOTS);
+                LeatherArmorMeta bootsMeta = (LeatherArmorMeta) boots.getItemMeta();
+                bootsMeta.setColor(Color.BLACK);
+                boots.setItemMeta(bootsMeta);
+
+                ItemStack leggings = new ItemStack(Material.LEATHER_LEGGINGS);
+                LeatherArmorMeta leggingsMeta = (LeatherArmorMeta) leggings.getItemMeta();
+                leggingsMeta.setColor(Color.BLACK);
+                leggings.setItemMeta(leggingsMeta);
+
+                ItemStack chestplate = new ItemStack(Material.LEATHER_CHESTPLATE);
+                LeatherArmorMeta chestplateMeta = (LeatherArmorMeta) chestplate.getItemMeta();
+                chestplateMeta.setColor(Color.BLACK);
+                chestplate.setItemMeta(chestplateMeta);
+
+                player.getInventory().setBoots(boots);
+                player.getInventory().setLeggings(leggings);
+                player.getInventory().setChestplate(chestplate);
 
 
             }
