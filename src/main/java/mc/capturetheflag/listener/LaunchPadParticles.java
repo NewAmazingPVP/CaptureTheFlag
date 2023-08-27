@@ -14,14 +14,17 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
+import static mc.capturetheflag.CaptureTheFlag.captureTheFlag;
+
 public class LaunchPadParticles implements Listener {
 
     @EventHandler
     public void onBlockPlace(BlockPlaceEvent event) {
         if (event.getBlock().getType() == Material.SHROOMLIGHT) {
             // Schedule a task to continuously spawn particles above the block
-            Bukkit.getScheduler().runTaskTimer(plugin, () -> {
+            Bukkit.getScheduler().runTaskTimer(captureTheFlag, () -> {
                 event.getBlock().getWorld().spawnParticle(Particle.CLOUD, event.getBlock().getLocation().add(0.5, 1.0, 0.5), 10);
             }, 0L, 20L); // Change the delay and period as needed (in ticks)
         }
     }
+}
