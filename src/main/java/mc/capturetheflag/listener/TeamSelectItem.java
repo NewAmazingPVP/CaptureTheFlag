@@ -114,7 +114,7 @@ public class TeamSelectItem implements Listener {
 
                 ItemStack NoTeam = new ItemStack(Material.BLACK_CONCRETE);
                 ItemMeta noteam = NoTeam.getItemMeta();
-                noteam.setDisplayName(ChatColor.YELLOW + "" + ChatColor.BOLD + "Click" + ChatColor.DARK_RED + " To Join Red");
+                noteam.setDisplayName(ChatColor.YELLOW + "" + ChatColor.BOLD + "Click" + ChatColor.DARK_GRAY + " Have No Team (Spectate)");
                 NoTeam.setItemMeta(noteam);
                 teamselect.setItem(26,NoTeam);
 
