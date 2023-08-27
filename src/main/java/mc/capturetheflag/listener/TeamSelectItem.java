@@ -42,7 +42,7 @@ public class TeamSelectItem implements Listener {
 
                 ItemStack g0 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
                 ItemMeta M0 = g0.getItemMeta();
-                M0.setDisplayName("");
+                M0.setDisplayName(" ");
                 g0.setItemMeta(M0);
                 teamselect.setItem(0,g0);
 
@@ -51,7 +51,7 @@ public class TeamSelectItem implements Listener {
 
                 ItemStack g1 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
                 ItemMeta M1 = g1.getItemMeta();
-                M1.setDisplayName("");
+                M1.setDisplayName(" ");
                 g1.setItemMeta(M1);
                 teamselect.setItem(1,g1);
 
@@ -60,7 +60,7 @@ public class TeamSelectItem implements Listener {
 
                 ItemStack g2 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
                 ItemMeta M2 = g2.getItemMeta();
-                M2.setDisplayName("");
+                M2.setDisplayName(" ");
                 g2.setItemMeta(M2);
                 teamselect.setItem(2,g2);
 
@@ -69,7 +69,7 @@ public class TeamSelectItem implements Listener {
 
                 ItemStack g3 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
                 ItemMeta M3 = g3.getItemMeta();
-                M3.setDisplayName("");
+                M3.setDisplayName(" ");
                 g3.setItemMeta(M3);
                 teamselect.setItem(3,g3);
 
@@ -78,7 +78,7 @@ public class TeamSelectItem implements Listener {
 
                 ItemStack g4 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
                 ItemMeta M4 = g4.getItemMeta();
-                M4.setDisplayName("");
+                M4.setDisplayName(" ");
                 g4.setItemMeta(M4);
                 teamselect.setItem(4,g4);
 
@@ -87,7 +87,7 @@ public class TeamSelectItem implements Listener {
 
                 ItemStack g5 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
                 ItemMeta M5 = g5.getItemMeta();
-                M5.setDisplayName("");
+                M5.setDisplayName(" ");
                 g5.setItemMeta(M5);
                 teamselect.setItem(5,g5);
 
