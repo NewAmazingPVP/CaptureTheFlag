@@ -41,20 +41,25 @@ public class TeamSelectMenuLis implements Listener {
                 player.performCommand("leave");
                 player.playSound(player.getLocation(), "minecraft:block.note_block.pling", 1.0f, 0.0f);
                 player.getWorld().spawnParticle(Particle.REDSTONE, player.getLocation(), 10, 0.6, 0.6, 0.6, new Particle.DustOptions(Color.BLACK, 3));
-                ItemStack boots = new ItemStack(Material.LEATHER_BOOTS);
                 player.sendMessage(ChatColor.DARK_GRAY + "You are no longer on a team!");
+
+                ItemStack boots = new ItemStack(Material.LEATHER_BOOTS);
                 LeatherArmorMeta bootsMeta = (LeatherArmorMeta) boots.getItemMeta();
                 bootsMeta.setColor(Color.BLACK);
+                bootsMeta.setDisplayName(ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "Black Armor");
                 boots.setItemMeta(bootsMeta);
 
                 ItemStack leggings = new ItemStack(Material.LEATHER_LEGGINGS);
                 LeatherArmorMeta leggingsMeta = (LeatherArmorMeta) leggings.getItemMeta();
+                leggingsMeta.setDisplayName(ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "Black Armor");
                 leggingsMeta.setColor(Color.BLACK);
+
                 leggings.setItemMeta(leggingsMeta);
 
                 ItemStack chestplate = new ItemStack(Material.LEATHER_CHESTPLATE);
                 LeatherArmorMeta chestplateMeta = (LeatherArmorMeta) chestplate.getItemMeta();
                 chestplateMeta.setColor(Color.BLACK);
+                chestplateMeta.setDisplayName(ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "Black Armor");
                 chestplate.setItemMeta(chestplateMeta);
 
                 player.getInventory().setBoots(boots);
