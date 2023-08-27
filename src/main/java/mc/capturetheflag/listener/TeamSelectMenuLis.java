@@ -23,7 +23,7 @@ public class TeamSelectMenuLis implements Listener {
                 Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "/join red");
                 Player player = (Player) event.getView().getPlayer();
                 player.performCommand("join red");
-                player.playSound(player.getLocation(), "minecraft:block.note_block.pling", 1.0f, 1.0f);
+                player.playSound(player.getLocation(), "minecraft:block.note_block.pling", 1.0f, 2.0f);
                 player.getWorld().spawnParticle(Particle.REDSTONE, player.getLocation(), 10, 0.6, 0.6, 0.6, new Particle.DustOptions(Color.RED, 3));
 
             } else if (event.getCurrentItem().getType() == Material.BLUE_CONCRETE) {
@@ -31,7 +31,7 @@ public class TeamSelectMenuLis implements Listener {
                 Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "/join blue");
                 Player player = (Player) event.getView().getPlayer();
                 player.performCommand("join blue");
-                player.playSound(player.getLocation(), "minecraft:block.note_block.pling", 1.0f, 1.0f);
+                player.playSound(player.getLocation(), "minecraft:block.note_block.pling", 1.0f, 2.0f);
                 player.getWorld().spawnParticle(Particle.REDSTONE, player.getLocation(), 10, 0.6, 0.6, 0.6, new Particle.DustOptions(Color.BLUE, 3));
 
             }
