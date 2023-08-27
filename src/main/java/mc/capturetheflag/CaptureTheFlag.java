@@ -69,13 +69,8 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         }, 0, 20);
         AutoUpload.startReleaseChecker();
     }
-    
 
-        @Override
-        public void onDisable() {
-            particleTask.cancel(); // Stop the task when the plugin is disabled
-        }
-    }
+
 
     @Override
     public void onDisable() {
