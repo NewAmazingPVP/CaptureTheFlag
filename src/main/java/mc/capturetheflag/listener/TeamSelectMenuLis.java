@@ -8,6 +8,9 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TeamSelectMenuLis implements Listener {
 
     @EventHandler
@@ -60,6 +63,9 @@ public class TeamSelectMenuLis implements Listener {
                 LeatherArmorMeta chestplateMeta = (LeatherArmorMeta) chestplate.getItemMeta();
                 chestplateMeta.setColor(Color.BLACK);
                 chestplateMeta.setDisplayName(ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "Black Armor");
+                List<String> lore = new ArrayList<String>();
+                lore.add(" ");
+                chestplateMeta.setLore(lore);
                 chestplate.setItemMeta(chestplateMeta);
 
                 player.getInventory().setBoots(boots);
