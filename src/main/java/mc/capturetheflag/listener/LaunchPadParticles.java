@@ -1,5 +1,7 @@
 package mc.capturetheflag.listener;
 
+import mc.capturetheflag.CaptureTheFlag;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.entity.Player;
@@ -16,10 +18,10 @@ public class LaunchPadParticles implements Listener {
 
     @EventHandler
     public void onBlockPlace(BlockPlaceEvent event) {
-        // Check if the placed block is the desired type
         if (event.getBlock().getType() == Material.SHROOMLIGHT) {
-            // Spawn particles above the placed block
-            event.getBlock().getWorld().spawnParticle(Particle.CLOUD, event.getBlock().getLocation().add(0.5, 1.0, 0.5), 10);
+            // Schedule a task to continuously spawn particles above the block
+            Bukkit.getScheduler().runTaskTimer(plugin, () -> {
+                event.getBlock().getWorld().spawnParticle(Particle.CLOUD, event.getBlock().getLocation().add(0.5, 1.0, 0.5), 10);
+            }, 0L, 20L); // Change the delay and period as needed (in ticks)
         }
     }
-}
