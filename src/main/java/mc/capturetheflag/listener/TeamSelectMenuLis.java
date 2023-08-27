@@ -50,22 +50,28 @@ public class TeamSelectMenuLis implements Listener {
                 LeatherArmorMeta bootsMeta = (LeatherArmorMeta) boots.getItemMeta();
                 bootsMeta.setColor(Color.BLACK);
                 bootsMeta.setDisplayName(ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "Black Armor");
+                List<String> lore = new ArrayList<String>();
+                lore.add(" ");
+                bootsMeta.setLore(lore);
                 boots.setItemMeta(bootsMeta);
 
                 ItemStack leggings = new ItemStack(Material.LEATHER_LEGGINGS);
                 LeatherArmorMeta leggingsMeta = (LeatherArmorMeta) leggings.getItemMeta();
                 leggingsMeta.setDisplayName(ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "Black Armor");
                 leggingsMeta.setColor(Color.BLACK);
-
+                List<String> lore2 = new ArrayList<String>();
+                lore2.add(" ");
+                leggingsMeta.setLore(lore2);
                 leggings.setItemMeta(leggingsMeta);
+
 
                 ItemStack chestplate = new ItemStack(Material.LEATHER_CHESTPLATE);
                 LeatherArmorMeta chestplateMeta = (LeatherArmorMeta) chestplate.getItemMeta();
                 chestplateMeta.setColor(Color.BLACK);
                 chestplateMeta.setDisplayName(ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "Black Armor");
-                List<String> lore = new ArrayList<String>();
-                lore.add(" ");
-                chestplateMeta.setLore(lore);
+                List<String> lore3 = new ArrayList<String>();
+                lore3.add(" ");
+                chestplateMeta.setLore(lore3);
                 chestplate.setItemMeta(chestplateMeta);
 
                 player.getInventory().setBoots(boots);
