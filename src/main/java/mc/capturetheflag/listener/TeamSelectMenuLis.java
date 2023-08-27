@@ -34,6 +34,14 @@ public class TeamSelectMenuLis implements Listener {
                 player.playSound(player.getLocation(), "minecraft:block.note_block.pling", 1.0f, 2.0f);
                 player.getWorld().spawnParticle(Particle.REDSTONE, player.getLocation(), 10, 0.6, 0.6, 0.6, new Particle.DustOptions(Color.BLUE, 3));
 
+            } else if (event.getCurrentItem().getType() == Material.BLACK_CONCRETE) {
+                Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "/leave");
+                Player player = (Player) event.getView().getPlayer();
+                player.performCommand("leave");
+                player.playSound(player.getLocation(), "minecraft:block.note_block.pling", 1.0f, 5.0f);
+                player.getWorld().spawnParticle(Particle.REDSTONE, player.getLocation(), 10, 0.6, 0.6, 0.6, new Particle.DustOptions(Color.BLACK, 3));
+
+
             }
 
 
