@@ -78,6 +78,8 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         }
     }
 
+
+
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
