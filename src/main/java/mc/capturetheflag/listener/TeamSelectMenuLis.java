@@ -42,6 +42,7 @@ public class TeamSelectMenuLis implements Listener {
                 player.playSound(player.getLocation(), "minecraft:block.note_block.pling", 1.0f, 0.0f);
                 player.getWorld().spawnParticle(Particle.REDSTONE, player.getLocation(), 10, 0.6, 0.6, 0.6, new Particle.DustOptions(Color.BLACK, 3));
                 ItemStack boots = new ItemStack(Material.LEATHER_BOOTS);
+                player.sendMessage(ChatColor.DARK_GRAY + "You are no longer on a team!");
                 LeatherArmorMeta bootsMeta = (LeatherArmorMeta) boots.getItemMeta();
                 bootsMeta.setColor(Color.BLACK);
                 boots.setItemMeta(bootsMeta);
