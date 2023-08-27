@@ -24,6 +24,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
+import org.bukkit.plugin.java.JavaPlugin;
 
 import static mc.capturetheflag.game.TeamSelect.joinTeamBlue;
 import static mc.capturetheflag.game.TeamSelect.joinTeamRed;
@@ -59,7 +60,6 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new Red_Banner_Click(), this);
         getServer().getPluginManager().registerEvents(new TeamSelectItem(), this);
         getServer().getPluginManager().registerEvents(new TeamSelectMenuLis(), this);
-        getServer().getPluginManager().registerEvents(new LaunchPadParticles(), this);
 
         setupEconomy();
         getServer().getScheduler().runTaskTimer(this, () -> {
@@ -68,6 +68,13 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
             }
         }, 0, 20);
         AutoUpload.startReleaseChecker();
+    }
+    
+
+        @Override
+        public void onDisable() {
+            particleTask.cancel(); // Stop the task when the plugin is disabled
+        }
     }
 
     @Override
