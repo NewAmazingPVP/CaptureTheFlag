@@ -112,8 +112,11 @@ public class TeamSelectItem implements Listener {
                 ItemStack g25 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
                 teamselect.setItem(25,g25);
 
-                ItemStack g26 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
-                teamselect.setItem(26,g26);
+                ItemStack NoTeam = new ItemStack(Material.BLACK_CONCRETE);
+                ItemMeta noteam = NoTeam.getItemMeta();
+                noteam.setDisplayName(ChatColor.YELLOW + "" + ChatColor.BOLD + "Click" + ChatColor.DARK_RED + " To Join Red");
+                NoTeam.setItemMeta(noteam);
+                teamselect.setItem(26,NoTeam);
 
 
                 p.openInventory(teamselect);
