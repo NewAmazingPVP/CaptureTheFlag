@@ -21,7 +21,7 @@ public class NoTeamArmor implements Listener {
         Player player = event.getPlayer();
         handlePlayer(player);
     }
-
+//FIX THISSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS [game still works just shows wrong armor color
     private void handlePlayer(Player player) {
         Scoreboard scoreboard = Bukkit.getScoreboardManager().getMainScoreboard();
         Team team = scoreboard.getEntryTeam(player.getName());
@@ -29,21 +29,21 @@ public class NoTeamArmor implements Listener {
         if (team != null && (team.getName().equals("RED") || team.getName().equals("BLUE"))) {
             ItemStack boots = new ItemStack(Material.LEATHER_BOOTS);
             LeatherArmorMeta bootsMeta = (LeatherArmorMeta) boots.getItemMeta();
-            bootsMeta.setColor(Color.WHITE);
-            bootsMeta.setDisplayName(ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "White Armor");
+            bootsMeta.setColor(Color.BLACK);
+            bootsMeta.setDisplayName(ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "Black Armor");
             boots.setItemMeta(bootsMeta);
 
             ItemStack leggings = new ItemStack(Material.LEATHER_LEGGINGS);
             LeatherArmorMeta leggingsMeta = (LeatherArmorMeta) leggings.getItemMeta();
-            leggingsMeta.setDisplayName(ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "White Armor");
-            leggingsMeta.setColor(Color.WHITE);
+            leggingsMeta.setDisplayName(ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "Black Armor");
+            leggingsMeta.setColor(Color.BLACK);
             leggings.setItemMeta(leggingsMeta);
 
 
             ItemStack chestplate = new ItemStack(Material.LEATHER_CHESTPLATE);
             LeatherArmorMeta chestplateMeta = (LeatherArmorMeta) chestplate.getItemMeta();
-            chestplateMeta.setColor(Color.WHITE);
-            chestplateMeta.setDisplayName(ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "White Armor");
+            chestplateMeta.setColor(Color.BLACK);
+            chestplateMeta.setDisplayName(ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "Black Armor");
             chestplate.setItemMeta(chestplateMeta);
 
             player.getInventory().setBoots(boots);
