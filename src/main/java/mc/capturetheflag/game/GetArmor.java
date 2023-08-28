@@ -16,9 +16,10 @@ public class GetArmor {
         Color color = null;
         if ("red".equalsIgnoreCase(teamName)) {
             color = Color.RED;
-            String Name = (ChatColor.DARK_RED + "" + ChatColor.BOLD + "Red Armor");*/
+            Name = (ChatColor.DARK_RED + "" + ChatColor.BOLD + "Red Armor");
         } else if ("blue".equalsIgnoreCase(teamName)) {
-
+            color = Color.BLUE;
+            Name = (ChatColor.DARK_BLUE + "" + ChatColor.BOLD + "Blue Armor");
         }
 
 
