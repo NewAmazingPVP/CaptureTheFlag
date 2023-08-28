@@ -95,36 +95,54 @@ public class TeamSelectItem implements Listener {
 
 
                 ItemStack g6 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
+                ItemMeta M6 = g6.getItemMeta();
+                M6.setDisplayName(" ");
+                g6.setItemMeta(M6);
                 teamselect.setItem(6,g6);
 
 
 
 
                 ItemStack g7 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
+                ItemMeta M7 = g7.getItemMeta();
+                M7.setDisplayName(" ");
+                g7.setItemMeta(M7);
                 teamselect.setItem(7,g7);
 
 
 
 
                 ItemStack g8 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
+                ItemMeta M8 = g8.getItemMeta();
+                M8.setDisplayName(" ");
+                g8.setItemMeta(M8);
                 teamselect.setItem(8,g8);
 
 
 
 
                 ItemStack g9 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
+                ItemMeta M9 = g9.getItemMeta();
+                M9.setDisplayName(" ");
+                g9.setItemMeta(M9);
                 teamselect.setItem(9,g9);
 
 
 
 
                 ItemStack g10 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
+                ItemMeta M10 = g10.getItemMeta();
+                M10.setDisplayName(" ");
+                g10.setItemMeta(M10);
                 teamselect.setItem(10,g10);
 
 
 
 
                 ItemStack g12 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
+                ItemMeta M12 = g12.getItemMeta();
+                M12.setDisplayName(" ");
+                g12.setItemMeta(M12);
                 teamselect.setItem(12,g12);
 
 
