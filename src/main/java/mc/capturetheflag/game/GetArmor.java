@@ -20,7 +20,6 @@ public class GetArmor {
         }
 
 
-
         ItemStack boots = new ItemStack(Material.LEATHER_BOOTS);
         LeatherArmorMeta bootsMeta = (LeatherArmorMeta) boots.getItemMeta();
         bootsMeta.setColor(color);

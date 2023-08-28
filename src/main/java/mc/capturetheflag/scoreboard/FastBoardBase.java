@@ -46,10 +46,10 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public abstract class FastBoardBase<T> {
 
-    private static final Map<Class<?>, Field[]> PACKETS = new HashMap<>(8);
     protected static final String[] COLOR_CODES = Arrays.stream(ChatColor.values())
             .map(Object::toString)
             .toArray(String[]::new);
+    private static final Map<Class<?>, Field[]> PACKETS = new HashMap<>(8);
     private static final VersionType VERSION_TYPE;
     // Packets and components
     private static final Class<?> CHAT_COMPONENT_CLASS;

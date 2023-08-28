@@ -33,6 +33,13 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
     public static CaptureTheFlag captureTheFlag;
     private final Map<UUID, FastBoard> boards = new HashMap<>();
 
+    public static void setupEconomy() {
+        RegisteredServiceProvider<Economy> rsp = Bukkit.getServicesManager().getRegistration(Economy.class);
+        if (rsp != null) {
+            economy = rsp.getProvider();
+        }
+    }
+
     @Override
     public void onEnable() {
         if (!getDataFolder().exists()) {
@@ -67,17 +74,13 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         AutoUpload.startReleaseChecker();
     }
 
-
-
     @Override
     public void onDisable() {
-    for(Player p : Bukkit.getOnlinePlayers()){
-        p.performCommand("leave");
-        p.clearActivePotionEffects();
+        for (Player p : Bukkit.getOnlinePlayers()) {
+            p.performCommand("leave");
+            p.clearActivePotionEffects();
         }
     }
-
-
 
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
@@ -116,30 +119,23 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         }
     }
 
-    public static void setupEconomy() {
-        RegisteredServiceProvider<Economy> rsp = Bukkit.getServicesManager().getRegistration(Economy.class);
-        if (rsp != null) {
-            economy = rsp.getProvider();
-        }
-    }
-
     private void updateBoard(FastBoard board) {
         int coins = PlayerMoney.getCoins(board.getPlayer());
 
         board.updateLines(
                 ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "--------------------",
-                ChatColor.GREEN + "" + ChatColor.BOLD +  "Time Left: N/A",
+                ChatColor.GREEN + "" + ChatColor.BOLD + "Time Left: N/A",
                 "",
-                ChatColor.DARK_GREEN + "" + ChatColor.BOLD +  "Rounds Left: N/A",
+                ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Rounds Left: N/A",
                 "",
-                ChatColor.DARK_AQUA + "" + ChatColor.BOLD +  "Souls: N/A",
-                ChatColor.DARK_PURPLE + "" + ChatColor.BOLD +  "--------------------",
+                ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Souls: N/A",
+                ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "--------------------",
                 ChatColor.AQUA + "" + ChatColor.BOLD + "           Scores       ",
                 "",
-                ChatColor.DARK_BLUE + "" + ChatColor.BOLD +  "Blue: N/A",
+                ChatColor.DARK_BLUE + "" + ChatColor.BOLD + "Blue: N/A",
                 "",
-                ChatColor.DARK_RED + "" + ChatColor.BOLD +  "Red: N/A",
-                ChatColor.DARK_PURPLE + "" + ChatColor.BOLD +  "--------------------"
+                ChatColor.DARK_RED + "" + ChatColor.BOLD + "Red: N/A",
+                ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "--------------------"
 
         );
     }
