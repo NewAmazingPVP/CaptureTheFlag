@@ -24,10 +24,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
-import org.bukkit.plugin.java.JavaPlugin;
 
-import static mc.capturetheflag.game.TeamSelect.joinTeamBlue;
-import static mc.capturetheflag.game.TeamSelect.joinTeamRed;
 import static mc.capturetheflag.variables.Locations.lobbyLoc;
 
 public final class CaptureTheFlag extends JavaPlugin implements Listener {
