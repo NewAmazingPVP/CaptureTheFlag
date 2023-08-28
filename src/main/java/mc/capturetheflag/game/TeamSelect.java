@@ -9,7 +9,7 @@ import org.bukkit.scoreboard.Team;
 import static mc.capturetheflag.game.GetArmor.armorColor;
 
 public class TeamSelect {
-    public static void joinTeamBlue(Player p){
+    public static void joinTeamBlue(Player p) {
         Scoreboard scoreboard = Bukkit.getScoreboardManager().getMainScoreboard();
         Team team = scoreboard.getTeam("BLUE");
         if (team == null) {
@@ -22,7 +22,7 @@ public class TeamSelect {
         armorColor(p, "blue");
     }
 
-    public static void joinTeamRed(Player p){
+    public static void joinTeamRed(Player p) {
         Scoreboard scoreboard = Bukkit.getScoreboardManager().getMainScoreboard();
         Team team = scoreboard.getTeam("RED");
         if (team == null) {
@@ -35,7 +35,7 @@ public class TeamSelect {
         armorColor(p, "red");
     }
 
-    public static void removeFromTeam(Player p){
+    public static void removeFromTeam(Player p) {
         Scoreboard scoreboard = Bukkit.getScoreboardManager().getMainScoreboard();
         Team red = scoreboard.getTeam("RED");
         if (red == null) {

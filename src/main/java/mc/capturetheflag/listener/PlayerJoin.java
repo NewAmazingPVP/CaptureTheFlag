@@ -11,7 +11,7 @@ public class PlayerJoin implements Listener {
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
-        Player player = (Player) event.getPlayer();
+        Player player = event.getPlayer();
         player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "This game is under development so things may not work!");
-        }
     }
+}

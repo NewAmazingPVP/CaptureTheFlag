@@ -53,7 +53,7 @@ public class TeamSetOnJoin implements Listener {
         String command = event.getCommand().toLowerCase();
 
         if (command.equals("stop") || command.equals("restart")) {
-            for(Player p : Bukkit.getOnlinePlayers()){
+            for (Player p : Bukkit.getOnlinePlayers()) {
                 p.performCommand("leave");
                 p.clearActivePotionEffects();
             }

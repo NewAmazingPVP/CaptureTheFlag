@@ -19,7 +19,8 @@ public class NoTeamArmor implements Listener {
         Player player = event.getPlayer();
         handlePlayer(player);
     }
-//FIX THISSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS [game still works just shows wrong armor color
+
+    //FIX THISSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS [game still works just shows wrong armor color
     private void handlePlayer(Player player) {
         Scoreboard scoreboard = Bukkit.getScoreboardManager().getMainScoreboard();
         Team team = scoreboard.getEntryTeam(player.getName());

@@ -17,7 +17,7 @@ import static mc.capturetheflag.game.GetTeam.getCurrentTeam;
 public class Blue_Banner_Click implements Listener {
     @EventHandler(priority = EventPriority.HIGH)
     public void onPlayerMove(PlayerMoveEvent event) {
-        Player player = (Player) event.getPlayer();
+        Player player = event.getPlayer();
         Team team = getCurrentTeam(player);
         Location to = event.getTo();
 
