@@ -149,72 +149,108 @@ public class TeamSelectItem implements Listener {
 
 
                 ItemStack g13 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
+                ItemMeta M13 = g13.getItemMeta();
+                M13.setDisplayName(" ");
+                g13.setItemMeta(M13);
                 teamselect.setItem(13,g13);
 
 
 
 
                 ItemStack g14 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
+                ItemMeta M14 = g14.getItemMeta();
+                M14.setDisplayName(" ");
+                g14.setItemMeta(M14);
                 teamselect.setItem(14,g14);
 
 
 
 
                 ItemStack g16 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
+                ItemMeta M16 = g16.getItemMeta();
+                M16.setDisplayName(" ");
+                g16.setItemMeta(M16);
                 teamselect.setItem(16,g16);
 
 
 
 
                 ItemStack g17 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
+                ItemMeta M17 = g17.getItemMeta();
+                M17.setDisplayName(" ");
+                g17.setItemMeta(M17);
                 teamselect.setItem(17,g17);
 
 
 
 
                 ItemStack g18 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
+                ItemMeta M18 = g18.getItemMeta();
+                M18.setDisplayName(" ");
+                g18.setItemMeta(M18);
                 teamselect.setItem(18,g18);
 
 
 
 
                 ItemStack g19 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
+                ItemMeta M19 = g19.getItemMeta();
+                M19.setDisplayName(" ");
+                g19.setItemMeta(M19);
                 teamselect.setItem(19,g19);
 
 
 
 
                 ItemStack g20 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
+                ItemMeta M20 = g20.getItemMeta();
+                M20.setDisplayName(" ");
+                g20.setItemMeta(M20);
                 teamselect.setItem(20,g20);
 
 
 
 
                 ItemStack g21 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
+                ItemMeta M21 = g21.getItemMeta();
+                M21.setDisplayName(" ");
+                g21.setItemMeta(M21);
                 teamselect.setItem(21,g21);
 
 
 
 
                 ItemStack g22 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
+                ItemMeta M22 = g22.getItemMeta();
+                M22.setDisplayName(" ");
+                g22.setItemMeta(M22);
                 teamselect.setItem(22,g22);
 
 
 
 
                 ItemStack g23 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
+                ItemMeta M23 = g23.getItemMeta();
+                M23.setDisplayName(" ");
+                g23.setItemMeta(M23);
                 teamselect.setItem(23,g23);
 
 
 
 
                 ItemStack g24 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
+                ItemMeta M24 = g24.getItemMeta();
+                M24.setDisplayName(" ");
+                g24.setItemMeta(M24);
                 teamselect.setItem(24,g24);
 
 
 
 
                 ItemStack g25 = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
+                ItemMeta M25 = g25.getItemMeta();
+                M25.setDisplayName(" ");
+                g25.setItemMeta(M25);
                 teamselect.setItem(25,g25);
 
 
