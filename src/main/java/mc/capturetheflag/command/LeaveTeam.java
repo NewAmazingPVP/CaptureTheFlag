@@ -5,7 +5,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import static mc.capturetheflag.game.TeamSelect.*;
+import static mc.capturetheflag.game.TeamSelect.removeFromTeam;
 
 public class LeaveTeam implements CommandExecutor {
     @Override
