@@ -25,6 +25,8 @@ public class Team_sel_item implements CommandExecutor {
         SI.setDisplayName(ChatColor.BOLD + "" + ChatColor.YELLOW + "Right Click" + ChatColor.BOLD + "" + ChatColor.GOLD + " To Select Your Team");
         teamsel.setItemMeta(SI);
 
+        player.getInventory().addItem(teamsel);
+
         return true;
     }
 }
