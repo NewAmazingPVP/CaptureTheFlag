@@ -36,6 +36,7 @@ public class ToxicWaistDetect implements Listener {
             player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 200, 55, true));
             player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 5, 55, true));
             player.spawnParticle(Particle.LAVA, player.getLocation().add(0.5, 1.0, 0.5), 10);
+            player.damage(7.0);
             String message = (ChatColor.YELLOW + "" + ChatColor.BOLD + player + ChatColor.GREEN + "" + ChatColor.BOLD + "Fell Into Toxic Waste!");
             Bukkit.broadcastMessage(message);
 
