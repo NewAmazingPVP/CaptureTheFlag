@@ -21,7 +21,7 @@ public class DetectBlock implements Listener {
         if (below.getBlock().getType() == Material.SPONGE) {
             player.playSound(player.getLocation(), "minecraft:block.slime_block.fall", 1.0f, 1.0f);
             player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 3, 55, true));
-            player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING, 40, 20, true));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING, 30, 10, true));
             player.spawnParticle(Particle.CLOUD, player.getLocation().add(0.5, 1.0, 0.5), 10);
         }
     }
