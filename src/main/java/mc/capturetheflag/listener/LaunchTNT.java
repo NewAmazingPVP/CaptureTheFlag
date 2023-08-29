@@ -12,6 +12,9 @@ import org.bukkit.potion.PotionEffectType;
 
 public class LaunchTNT implements Listener {
 
+    /**
+     *
+     */
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
         Player player = event.getPlayer();

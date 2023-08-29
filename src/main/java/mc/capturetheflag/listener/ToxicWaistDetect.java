@@ -17,6 +17,8 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.concurrent.TimeUnit;
 
+import static mc.capturetheflag.CaptureTheFlag.captureTheFlag;
+import static mc.capturetheflag.game.GetArmor.armorColor;
 import static mc.capturetheflag.game.GetTeam.getCurrentTeam;
 
 public class ToxicWaistDetect implements Listener {
@@ -61,33 +63,13 @@ public class ToxicWaistDetect implements Listener {
             player.getInventory().setChestplate(chestplate);
 
 
-            BukkitRunnable delayTask = new BukkitRunnable() {
-                @Override
-                public void run() {
-
-                    if (team.getName().equalsIgnoreCase("red")) {
-                        ItemStack Rboots = new ItemStack(Material.LEATHER_BOOTS);
-                        LeatherArmorMeta RbootsMeta = (LeatherArmorMeta) boots.getItemMeta();
-                        RbootsMeta.setColor(Color.RED);
-                        RbootsMeta.setDisplayName(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Red Armor");
-                        Rboots.setItemMeta(RbootsMeta);
-
-                        ItemStack Rleggings = new ItemStack(Material.LEATHER_LEGGINGS);
-                        LeatherArmorMeta RleggingsMeta = (LeatherArmorMeta) leggings.getItemMeta();
-                        RleggingsMeta.setDisplayName(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Red Armor");
-                        RleggingsMeta.setColor(Color.RED);
-                        Rleggings.setItemMeta(RleggingsMeta);
-
-
-                        ItemStack Rchestplate = new ItemStack(Material.LEATHER_CHESTPLATE);
-                        LeatherArmorMeta RchestplateMeta = (LeatherArmorMeta) chestplate.getItemMeta();
-                        RchestplateMeta.setColor(Color.RED);
-                        RchestplateMeta.setDisplayName(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Red Armor");
-                        Rchestplate.setItemMeta(RchestplateMeta);
-                        delayTask.runTaskLater(CaptureTheFlag, 20 * 20);
-                    }
+            Bukkit.getScheduler().runTaskLater(captureTheFlag, () -> {
+                if (team.getName().equalsIgnoreCase("red")) {
+                    armorColor(player, "red");
+                } else if (team.getName().equalsIgnoreCase("blue")) {
+                    armorColor(player, "blue");
                 }
-            }
+            }, 20*5);
         }
     }
 }
