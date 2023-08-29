@@ -15,4 +15,7 @@ commands:
   start_ctf:
     description: Starts CTF.
     usage: /start_ctf
+  getteamselitem:
+    description: Gives you the team select item.
+    usage: /getteamselitem
 
