@@ -70,7 +70,7 @@ public class ToxicWaistDetect implements Listener {
                 } else if (team.getName().equalsIgnoreCase("blue")) {
                     armorColor(player, "blue");
                 }
-            }, 20*5);
+            }, 20*10);
         }
     }
 }
