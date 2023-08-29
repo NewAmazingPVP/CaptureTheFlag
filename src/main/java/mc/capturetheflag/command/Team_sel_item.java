@@ -22,7 +22,7 @@ public class Team_sel_item implements CommandExecutor {
         Player player = (Player) sender;
         ItemStack teamsel = new ItemStack(Material.RECOVERY_COMPASS);
         ItemMeta SI = teamsel.getItemMeta();
-        SI.setDisplayName(ChatColor.BOLD + "" + ChatColor.YELLOW + "Right Click" + ChatColor.BOLD + "" + ChatColor.GOLD + " To Select Your Team");
+        SI.setDisplayName(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click" + "" + ChatColor.GOLD + " To Select Your Team");
         teamsel.setItemMeta(SI);
 
         player.getInventory().addItem(teamsel);
