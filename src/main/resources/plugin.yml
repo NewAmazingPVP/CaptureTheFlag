@@ -4,15 +4,15 @@ main: mc.capturetheflag.CaptureTheFlag
 api-version: 1.20
 commands:
   join:
-    description: Join a team
+    description: Join a team.
     usage: /join <team>
   leave:
-    description: Leave a team
+    description: Leave a team.
     usage: /leave
   jail_ctf:
-    description: Put someone in jail (for testing)
+    description: Put someone in jail (for testing)...
     usage: /jail <name>
   start_ctf:
-    description: Starts CTF
+    description: Starts CTF.
     usage: /start_ctf
 

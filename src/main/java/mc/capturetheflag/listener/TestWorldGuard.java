@@ -15,9 +15,8 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 public class TestWorldGuard implements Listener {
 
-        @EventHandler
+        /*@EventHandler
         public void onBlockBreak(BlockBreakEvent event) {
-            event.setCancelled(true);
+            event.setCancelled(true);*/
 
         }
-    }
