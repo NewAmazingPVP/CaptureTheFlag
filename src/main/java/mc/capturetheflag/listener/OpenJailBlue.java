@@ -21,18 +21,9 @@ public class OpenJailBlue implements Listener {
         if (event.getAction().toString().contains("LEFT_CLICK") && event.getClickedBlock() != null) {
             Block clickedBlock = event.getClickedBlock();
             if (clickedBlock.getType() == Material.BLUE_GLAZED_TERRACOTTA) {
-
-                Inventory openblue = Bukkit.createInventory(p, 9, ChatColor.DARK_BLUE + "[Open Jail]");
-
-                ItemStack OPB = new ItemStack(Material.BLUE_GLAZED_TERRACOTTA);
-                ItemMeta Bmeta = OPB.getItemMeta();
-                Bmeta.setDisplayName(ChatColor.YELLOW + "" + ChatColor.BOLD + "Click" + ChatColor.DARK_BLUE + "" +ChatColor.BOLD + " To Open Jail!");
-                OPB.setItemMeta(Bmeta);
-                openblue.setItem(5, OPB);
+                //For this we will have it break / place every door for a team on every map. No one can tell that it's happening anyway, so it's faster to code =D
 
 
-
-                p.openInventory(openblue);
             }
         }
 
