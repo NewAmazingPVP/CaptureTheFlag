@@ -26,7 +26,7 @@ public class ToxicWaistDetect implements Listener {
         Location below = to.clone().subtract(0, 1, 0);
         Team team = getCurrentTeam(player);
 
-        if (below.getBlock().getType() == Material.SPONGE) {
+        if (below.getBlock().getType() == Material.LIME_STAINED_GLASS) {
             player.playSound(player.getLocation(), "minecraft:block.lava.extinguish", 999999999999.0f, 1.0f);
             player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 150, 55, true));
             player.spawnParticle(Particle.LAVA, player.getLocation().add(0.5, 1.0, 0.5), 10);
