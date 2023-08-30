@@ -69,6 +69,7 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new OpenJailBlue(), this);
         getServer().getPluginManager().registerEvents(new TestWorldGuard(), this);
         getServer().getPluginManager().registerEvents(new ToxicWaistDetect(), this);
+        getServer().getPluginManager().registerEvents(new random_walk_test(), this);
 
         setupEconomy();
         getServer().getScheduler().runTaskTimer(this, () -> {
