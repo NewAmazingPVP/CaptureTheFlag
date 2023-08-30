@@ -36,7 +36,8 @@ public class start_ctf implements CommandExecutor {
         float volume = 1.0f;
         float pitch = 1.0f;
         for (Player all : Bukkit.getOnlinePlayers()) {
-            all.playSound(all.getLocation(), sound, volume, pitch);{
+            all.playSound(all.getLocation(), sound, volume, pitch);
+            {
 
             }
             Sound Fsound = Sound.BLOCK_NOTE_BLOCK_BIT;
@@ -45,6 +46,9 @@ public class start_ctf implements CommandExecutor {
             for (Player Fall : Bukkit.getOnlinePlayers()) {
                 Fall.playSound(Fall.getLocation(), Fsound, Fvolume, Fpitch);
 
-        return true;
+                return true;
+            }
+        }
+        return false;
     }
 }
