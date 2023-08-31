@@ -20,7 +20,7 @@ public class Speed_boost_block implements Listener {
 
         if (below.getBlock().getType() == Material.AMETHYST_BLOCK) {
             player.playSound(player.getLocation(), "minecraft:block.beacon.ambient", 1.0f, 2.0f);
-            player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING, 1, 5, true));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING, 3, 5, true));
             player.spawnParticle(Particle.CLOUD, player.getLocation().add(0.5, 1.0, 0.5), 10);
         }
     }
