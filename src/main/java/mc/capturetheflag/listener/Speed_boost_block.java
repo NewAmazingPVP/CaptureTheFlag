@@ -16,7 +16,7 @@ public class Speed_boost_block implements Listener {
     public void onPlayerMove(PlayerMoveEvent event) {
         Player player = event.getPlayer();
         Location to = event.getTo();
-        Location below = to.clone().subtract(0, 2, 0);
+        Location below = to.clone().subtract(0, 1, 0);
 
         if (below.getBlock().getType() == Material.AMETHYST_BLOCK) {
             player.playSound(player.getLocation(), "minecraft:block.beacon.ambient", 1.0f, 2.0f);
