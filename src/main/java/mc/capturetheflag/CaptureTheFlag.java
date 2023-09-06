@@ -1,8 +1,6 @@
 package mc.capturetheflag;
 
-import mc.capturetheflag.command.LeaveTeam;
-import mc.capturetheflag.command.TeamJoin;
-import mc.capturetheflag.command.jail_ctf;
+import mc.capturetheflag.command.*;
 import mc.capturetheflag.game.PlayerMoney;
 import mc.capturetheflag.listener.*;
 import mc.capturetheflag.scoreboard.FastBoard;
@@ -49,6 +47,8 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         /*getCommand("join").setExecutor(new TeamJoin());
         getCommand("leave").setExecutor(new LeaveTeam());
         getCommand("jail_ctf").setExecutor(new jail_ctf());
+        getCommand("getteamselitem").setExecutor(new Team_sel_item());
+        getCommand("start_ctf").setExecutor(new start_ctf());
         getServer().getPluginManager().registerEvents(this, this);
         getServer().getPluginManager().registerEvents(new DetectBlock(), this);
         getServer().getPluginManager().registerEvents(new LaunchBall(), this);
@@ -67,6 +67,10 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new OpenJailBlue(), this);
         getServer().getPluginManager().registerEvents(new TestWorldGuard(), this);
         getServer().getPluginManager().registerEvents(new ToxicWaistDetect(), this);
+        getServer().getPluginManager().registerEvents(new random_walk_test(), this);
+        getServer().getPluginManager().registerEvents(new Speed_boost_block(), this);
+        /*getServer().getPluginManager().registerEvents(new InvintoryClickPTest(), this);*/
+        /*getServer().getPluginManager().registerEvents(new StunGun(), this);*/
 
         setupEconomy();*/
         getServer().getScheduler().runTaskTimer(this, () -> {

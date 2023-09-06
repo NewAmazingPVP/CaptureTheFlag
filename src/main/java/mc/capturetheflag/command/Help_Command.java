@@ -1,4 +1,4 @@
 package mc.capturetheflag.command;
 
-public class GetTeamSelItem {
+public class Help_Command {
 }
