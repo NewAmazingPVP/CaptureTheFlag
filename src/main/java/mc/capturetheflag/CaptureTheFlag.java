@@ -73,6 +73,8 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new StunGun(), this);
 
         setupEconomy();*/
+
+        getServer().getPluginManager().registerEvents(new Lightning_cythe(), this);
         getServer().getScheduler().runTaskTimer(this, () -> {
             for (FastBoard board : this.boards.values()) {
                 updateBoard(board);
