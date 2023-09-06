@@ -46,7 +46,7 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
             getDataFolder().mkdirs();
         }
         captureTheFlag = this;
-        getCommand("join").setExecutor(new TeamJoin());
+        /*getCommand("join").setExecutor(new TeamJoin());
         getCommand("leave").setExecutor(new LeaveTeam());
         getCommand("jail_ctf").setExecutor(new jail_ctf());
         getServer().getPluginManager().registerEvents(this, this);
@@ -68,7 +68,7 @@ public final class CaptureTheFlag extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new TestWorldGuard(), this);
         getServer().getPluginManager().registerEvents(new ToxicWaistDetect(), this);
 
-        setupEconomy();
+        setupEconomy();*/
         getServer().getScheduler().runTaskTimer(this, () -> {
             for (FastBoard board : this.boards.values()) {
                 updateBoard(board);
